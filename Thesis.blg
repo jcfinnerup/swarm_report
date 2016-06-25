@@ -14,46 +14,47 @@ Already encountered file Chapters/appendix1.aux
 I'm skipping whatever remains of this command
 The style file: alpha.bst
 Database file #1: References.bib
-Warning--empty journal in latteur_drone-based_2016
+Warning--empty journal in latteur_drone-based_????
+Warning--empty year in latteur_drone-based_????
 You've used 7 entries,
             2543 wiz_defined-function locations,
-            606 strings with 6361 characters,
-and the built_in function-call counts, 3978 in all, are:
-= -- 386
-> -- 245
-< -- 4
-+ -- 91
-- -- 91
-* -- 303
-:= -- 641
-add.period$ -- 23
+            605 strings with 6374 characters,
+and the built_in function-call counts, 3995 in all, are:
+= -- 380
+> -- 270
+< -- 3
++ -- 102
+- -- 101
+* -- 326
+:= -- 661
+add.period$ -- 22
 call.type$ -- 7
-change.case$ -- 63
+change.case$ -- 68
 chr.to.int$ -- 7
-cite$ -- 8
-duplicate$ -- 148
-empty$ -- 258
-format.name$ -- 94
-if$ -- 823
+cite$ -- 9
+duplicate$ -- 136
+empty$ -- 242
+format.name$ -- 104
+if$ -- 804
 int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 7
-newline$ -- 39
+newline$ -- 38
 num.names$ -- 21
-pop$ -- 70
+pop$ -- 74
 preamble$ -- 1
-purify$ -- 70
+purify$ -- 75
 quote$ -- 0
-skip$ -- 131
+skip$ -- 115
 stack$ -- 0
-substring$ -- 202
-swap$ -- 47
-text.length$ -- 4
+substring$ -- 190
+swap$ -- 37
+text.length$ -- 3
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 56
-warning$ -- 1
-while$ -- 35
+warning$ -- 2
+while$ -- 34
 width$ -- 8
-write$ -- 93
+write$ -- 91
 (There was 1 error message)

@@ -1,13 +1,12 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
 \begin{thebibliography}{SMVDPB05}
 
-\bibitem[BRG{\etalchar{+}}11]{bhattacharjee_multi-robot_2011}
-P.~Bhattacharjee, P.~Rakshit, I.~Goswami, A.~Konar, and A.~K. Nagar.
-\newblock Multi-robot path-planning using artificial bee colony optimization
-  algorithm.
-\newblock In {\em 2011 {Third} {World} {Congress} on {Nature} and
-  {Biologically} {Inspired} {Computing} ({NaBIC})}, pages 219--224, October
-  2011.
+\bibitem[ALH{\etalchar{+}}14]{augugliaro_flight_2014}
+F.~Augugliaro, S.~Lupashin, M.~Hamer, C.~Male, M.~Hehn, M.~W. Mueller, J.~S.
+  Willmann, F.~Gramazio, M.~Kohler, and R.~D'Andrea.
+\newblock The {Flight} {Assembled} {Architecture} installation: {Cooperative}
+  construction with flying machines.
+\newblock {\em IEEE Control Systems}, 34(4):46--64, August 2014.
 
 \bibitem[CPD{\etalchar{+}}14]{clark_autonomous_2014}
 Ruaridh Clark, Giuliano Punzo, Gordon Dobie, Rahul Summan, Charles~Norman
@@ -27,12 +26,11 @@ Owen Holland and Chris Melhuish.
 \newblock Stigmergy, self-organization, and sorting in collective robotics.
 \newblock {\em Artificial life}, 5(2):173--202, 1999.
 
-\bibitem[LGB{\etalchar{+}}16]{latteur_drone-based_2016}
+\bibitem[LGB{\etalchar{+}}]{latteur_drone-based_????}
 Pierre LATTEUR, Sébastien GOESSENS, Jean-Sébastien BRETON, Justin LEPLAT,
   Zhao MAb, and Caitlin MUELLER.
 \newblock Drone-{Based} {Additive} {Manufacturing} of {Architectural}
   {Structures}.
-\newblock 2016.
 
 \bibitem[PKG{\etalchar{+}}02]{pettinaro_swarm_2002}
 Giovanni~Cosimo Pettinaro, I.~Kwee, Luca~Maria Gambardella, Francesco Mondada,

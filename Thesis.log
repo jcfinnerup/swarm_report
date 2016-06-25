@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  25 JUN 2016 15:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  25 JUN 2016 16:41
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -783,19 +783,15 @@ Package pdftex.def Info: figures/SignatureDummy.jpg used on input line 17.
 
 (./Chapters/introduction.tex
 Chapter 1.
-
-Underfull \vbox (badness 10000) has occurred while \output is active []
-
- [1
+[1
 
 
-])
-[2]
+]) [2]
 \openout2 = `Chapters/methodology.aux'.
 
  (./Chapters/methodology.tex
 Chapter 2.
-<figures/SA_accel_with_no_vel_limit.png, id=173, 1427.3325pt x 738.76pt>
+<figures/SA_accel_with_no_vel_limit.png, id=177, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_with_no_vel_limit.png Graphic file (type png)
 
 <use figures/SA_accel_with_no_vel_limit.png>
@@ -850,7 +846,7 @@ No file Chapters/appendix1.tex.
 
 
 ]
-Underfull \hbox (badness 2591) in paragraph at lines 38--43
+Underfull \hbox (badness 2591) in paragraph at lines 36--41
 \T1/cmr/m/n/10 Francesco Mon-dada, Dario Flo-re-ano, Ste-fano Nolfi, J.-L.
  []
 
@@ -870,8 +866,8 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
  9409 strings out of 494501
- 136499 string characters out of 6167030
- 236967 words of memory out of 5000000
+ 136483 string characters out of 6167030
+ 236957 words of memory out of 5000000
  12396 multiletter control sequences out of 15000+600000
  25721 words of font info for 66 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
@@ -891,10 +887,10 @@ ype1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015basic/texmf-dist/font
 s/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basic/texmf-dist/f
 onts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015basic/texmf-dis
 t/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Thesis.pdf (22 pages, 301666 bytes).
+Output written on Thesis.pdf (22 pages, 303229 bytes).
 PDF statistics:
- 276 PDF objects out of 1000 (max. 8388607)
- 233 compressed objects within 3 object streams
+ 277 PDF objects out of 1000 (max. 8388607)
+ 234 compressed objects within 3 object streams
  51 named destinations out of 1000 (max. 500000)
  168 words of extra memory for PDF output out of 10000 (max. 10000000)
 
