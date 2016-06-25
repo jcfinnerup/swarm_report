@@ -23,6 +23,7 @@
 % PACKAGES
 %==================================================================================================
 \usepackage{LukeThesis}                             %Import Thesis base style
+\usepackage{svg/svg}
 %input{PhDMacros}                                   %Thesis specific macros
 %
 %==================================================================================================
@@ -57,13 +58,13 @@
 %--------------------
 \frontmatter
 \pagenumbering{roman}                               %Set frontmatter numbering style
-\input{Chapters/SummaryUK}                                   %English summary of Thesis
+\input{Chapters/summaryUK}                                   %English summary of Thesis
 \markboth{}{}                                       %Set headings (left)(right)
-\input{Chapters/SummaryDK}                                   %Danish summary of Thesis
+\input{Chapters/summaryDK}                                   %Danish summary of Thesis
 \markboth{}{}                                       %Set headings (left)(right)
-\input{Chapters/Preface}                                     %Preface
+\input{Chapters/preface}                                     %Preface
 \markboth{}{}                                       %Set headings (left)(right)
-\input{Chapters/Acknowledgements}                            %Acknowledgements
+\input{Chapters/acknowledgements}                            %Acknowledgements
 \markboth{}{}                                       %Set headings (left)(right)
 %------------------
 % Table of contents
@@ -81,13 +82,18 @@
 % Main content
 %-------------
 \mainmatter
-\include{Chapters/Introduction} 
-\include{Chapters/Simulation}                                 %Chapter 1
-\include{Chapters/Design}                                 %Chapter 1
+\include{Chapters/introduction} 
+\include{Chapters/methodology} 
+\include{Chapters/simulation}                                 %Chapter 1
+\include{Chapters/design}  
+\include{Chapters/references}  
 
-%\include{Chapter2}                                 %Chapter 2
+\include{Chapters/appendix1}                                 %Appendix A
+
+%\include{Chapter2}                                 		%Chapter 2
 \appendix
-\include{Chapters/Appendix1}                                 %Appendix A
+\include{Chapters/appendix1}                                 %Appendix A
+
 %-----------
 % Backmatter
 %-----------

@@ -1,6 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  6 APR 2016 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  21 JUN 2016 13:57
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **Thesis.tex
 (./Thesis.tex
@@ -541,29 +541,51 @@ Package: latexsym 1998/08/17 v2.2e Standard LaTeX package (lasy symbols)
 LaTeX Font Info:    Overwriting symbol font `lasy' in version `bold'
 (Font)                  U/lasy/m/n --> U/lasy/b/n on input line 52.
 )
-
-! LaTeX Error: File `epic.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-
-! LaTeX Error: File `eepic.sty' not found.
-
-Type X to quit or <RETURN> to proceed,
-or enter new name. (Default extension: sty)
-
-Enter file name: 
-(/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/epsfig.sty
+(./epic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count114
+\d@lta=\count115
+\@delta=\dimen126
+\@@delta=\dimen127
+\@gridcnt=\count116
+\@joinkind=\count117
+\@dotgap=\dimen128
+\@ddotgap=\dimen129
+\@x@diff=\count118
+\@y@diff=\count119
+\x@diff=\dimen130
+\y@diff=\dimen131
+\@dotbox=\box28
+\num@segments=\count120
+\num@segmentsi=\count121
+\@datafile=\read1
+) (./eepic.sty
+Enhancements to Picture Environment. Version 1.2 - Released June 1, 1986
+\@@multicnt=\count122
+\d@lta=\count123
+\@delta=\dimen132
+\@@delta=\dimen133
+\@gridcnt=\count124
+\@joinkind=\count125
+\@dotgap=\dimen134
+\@ddotgap=\dimen135
+\@x@diff=\count126
+\@y@diff=\count127
+\x@diff=\dimen136
+\y@diff=\dimen137
+\@dotbox=\box29
+\num@segments=\count128
+\num@segmentsi=\count129
+\@datafile=\read2
+) (/usr/local/texlive/2015basic/texmf-dist/tex/latex/graphics/epsfig.sty
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
-\epsfxsize=\dimen126
-\epsfysize=\dimen127
+\epsfxsize=\dimen138
+\epsfysize=\dimen139
 )
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/psfrag/psfrag.sty
 Package: psfrag 1998/04/11 v3.04 PSfrag (MCG)
-\pfg@pcount=\count114
-\pfg@scount=\count115
+\pfg@pcount=\count130
+\pfg@scount=\count131
 \pfg@temp=\write3
 )
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/tools/theorem.sty
@@ -576,46 +598,90 @@ Package: theorem 2014/10/28 v2.2c Theorem extension package (FMi)
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/tools/thp.sty
 File: thp.sty 2014/10/28 v2.2c Theorem extension package (FMi)
 ))
-\c@lemma=\count116
-\c@example=\count117
+\c@lemma=\count132
+\c@example=\count133
 )
-Package hyperref Info: Option `breaklinks' set `true' on input line 39.
-Package hyperref Info: Option `bookmarksopen' set `true' on input line 39.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 39.
-Package hyperref Info: Option `plainpages' set `false' on input line 39.
+(./svg/svg.sty
 
-(./Thesis.aux (./Chapters/Introduction.aux) (./Chapters/Simulation.aux)
-(./Chapters/Design.aux) (./Chapters/Appendix1.aux))
+LaTeX Warning: You have requested package `svg/svg',
+               but the package provides `svg'.
+
+Package: svg 2012/09/05 v1.0 SVG inclusion and extraction
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/xkeyval/xkeyval.tex
+(/usr/local/texlive/2015basic/texmf-dist/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks24
+\XKV@tempa@toks=\toks25
+)
+\XKV@depth=\count134
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count135
+\sf@farskip=\skip58
+\sf@captopadj=\dimen140
+\sf@capskip=\skip59
+\sf@nearskip=\skip60
+\c@subfigure=\count136
+\c@subfigure@save=\count137
+\c@lofdepth=\count138
+\c@subtable=\count139
+\c@subtable@save=\count140
+\c@lotdepth=\count141
+\sf@top=\skip61
+\sf@bottom=\skip62
+)
+(./import.sty
+Package: import 2009/03/23  v 5.1
+)
+(/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/transparent.sty
+Package: transparent 2007/01/08 v1.0 Transparency via pdfTeX's color stack (HO)
+
+)
+\SVG@out@width=\skip63
+\SVG@out@height=\skip64
+\c@svgfigure=\count142
+)
+Package hyperref Info: Option `breaklinks' set `true' on input line 40.
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 40.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 40.
+Package hyperref Info: Option `plainpages' set `false' on input line 40.
+
+(./Thesis.aux (./Chapters/introduction.aux) (./Chapters/methodology.aux)
+(./Chapters/simulation.aux))
 \openout1 = `Thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 50.
-LaTeX Font Info:    ... okay on input line 50.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 51.
+LaTeX Font Info:    ... okay on input line 51.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count118
-\scratchdimen=\dimen128
-\scratchbox=\box28
-\nofMPsegments=\count119
-\nofMParguments=\count120
-\everyMPshowfont=\toks24
-\MPscratchCnt=\count121
-\MPscratchDim=\dimen129
-\MPnumerator=\count122
-\makeMPintoPDFobject=\count123
-\everyMPtoPDFconversion=\toks25
+\scratchcounter=\count143
+\scratchdimen=\dimen141
+\scratchbox=\box30
+\nofMPsegments=\count144
+\nofMParguments=\count145
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count146
+\MPscratchDim=\dimen142
+\MPnumerator=\count147
+\makeMPintoPDFobject=\count148
+\everyMPtoPDFconversion=\toks27
 ) (/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -631,10 +697,11 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: End \AtBeginDocument code.
-\AtBeginShipoutBox=\box29
-Package hyperref Info: Link coloring OFF on input line 50.
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 51.
  (/usr/local/texlive/2015basic/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -642,34 +709,34 @@ Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 y
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count124
+\c@section@level=\count149
 LaTeX Info: Redefining \Ref on input line 513.
 )
-LaTeX Info: Redefining \ref on input line 50.
-LaTeX Info: Redefining \pageref on input line 50.
-LaTeX Info: Redefining \nameref on input line 50.
+LaTeX Info: Redefining \ref on input line 51.
+LaTeX Info: Redefining \pageref on input line 51.
+LaTeX Info: Redefining \nameref on input line 51.
  (./Thesis.out) (./Thesis.out)
 \@outlinefile=\write4
 \openout4 = `Thesis.out'.
 
-LaTeX Info: Redefining \Ref on input line 50.
-LaTeX Font Info:    Try loading font information for T1+cmss on input line 54.
+LaTeX Info: Redefining \Ref on input line 51.
+LaTeX Font Info:    Try loading font information for T1+cmss on input line 55.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=52, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=44, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
-Package pdftex.def Info: figures/DTU-logo.pdf used on input line 54.
+Package pdftex.def Info: figures/DTU-logo.pdf used on input line 55.
 (pdftex.def)             Requested size: 77.97668pt x 113.74683pt.
  [1
 Non-PDF special ignored!
 
 
 Non-PDF special ignored!{/usr/local/texlive/2015basic/texmf-var/fonts/map/pdfte
-x/updmap/pdftex.map} <./figures/DTU-logo.pdf>] [2] (./Chapters/SummaryUK.tex
+x/updmap/pdftex.map} <./figures/DTU-logo.pdf>] [2] (./Chapters/summaryUK.tex
 LaTeX Font Info:    Try loading font information for U+msa on input line 1.
 
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -685,21 +752,21 @@ LaTeX Font Info:    Try loading font information for U+lasy on input line 1.
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/ulasy.fd
 File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ))
-(./Chapters/SummaryDK.tex [1
+(./Chapters/summaryDK.tex [1
 
 
 ] [2
 
-]) (./Chapters/Preface.tex [3] [4
+]) (./Chapters/preface.tex [3] [4
 
 ]
-<figures/SignatureDummy.jpg, id=87, 257.46187pt x 103.13531pt>
+<figures/SignatureDummy.jpg, id=79, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
 Package pdftex.def Info: figures/SignatureDummy.jpg used on input line 17.
 (pdftex.def)             Requested size: 128.7306pt x 51.56752pt.
-) (./Chapters/Acknowledgements.tex [5 <./figures/SignatureDummy.jpg>] [6
+) (./Chapters/acknowledgements.tex [5 <./figures/SignatureDummy.jpg>] [6
 
 ]) [7] [8] (./Thesis.toc)
 \tf@toc=\write5
@@ -710,10 +777,10 @@ Package pdftex.def Info: figures/SignatureDummy.jpg used on input line 17.
 ] [10
 
 ]
-\openout2 = `Chapters/Introduction.aux'.
+\openout2 = `Chapters/introduction.aux'.
 
 
-(./Chapters/Introduction.tex
+(./Chapters/introduction.tex
 Chapter 1.
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 11.
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmtt.fd
@@ -733,76 +800,64 @@ File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 26.
 ) [2]
-\openout2 = `Chapters/Simulation.aux'.
+\openout2 = `Chapters/methodology.aux'.
 
 
-(./Chapters/Simulation.tex
+(./Chapters/methodology.tex
 Chapter 2.
 ) [3
 
 
 
 ]
-\openout2 = `Chapters/Design.aux'.
+\openout2 = `Chapters/simulation.aux'.
 
- (./Chapters/Design.tex [4
+ (./Chapters/simulation.tex [4
 
 
 
 ]
 Chapter 3.
-) [5]
-\openout2 = `Chapters/Appendix1.aux'.
+<./svg/root.pdf, id=130, 455.30101pt x 308.352pt>
+File: ./svg/root.pdf Graphic file (type pdf)
+ <use ./svg/root.pdf>
+Package pdftex.def Info: ./svg/root.pdf used on input line 8.
+(pdftex.def)             Requested size: 455.2999pt x 308.35124pt.
+File: ./svg/root.pdf Graphic file (type pdf)
 
- (./Chapters/Appendix1.tex [6
+<use ./svg/root.pdf>
+Package pdftex.def Info: ./svg/root.pdf used on input line 8.
+(pdftex.def)             Requested size: 455.2999pt x 308.35124pt.
+ (./svg/root.pdf_tex
+
+LaTeX Warning: File `root.pdf' not found on input line 20.
 
 
+! Package pdftex.def Error: File `root.pdf' not found.
 
-]
-Appendix A.
-) [7] [8
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.20 ...ludegraphics[width=\unitlength]{root.pdf}}
+                                                  %
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.20 ...ludegraphics[width=\unitlength]{root.pdf}}
+                                                  %
+Using draft setting for this image.
+Try typing  <return>  to proceed.
+If that doesn't work, type  X <return>  to quit.
 
-
-]
-No file Thesis.bbl.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 101.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 101.
-(./Thesis.aux (./Chapters/Introduction.aux) (./Chapters/Simulation.aux)
-(./Chapters/Design.aux) (./Chapters/Appendix1.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 101.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 101.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: 4AF4D5E38D14812D96297AADC4AC07A6;622.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 101.
- ) 
+ 
 Here is how much of TeX's memory you used:
- 8809 strings out of 494501
- 127785 string characters out of 6167030
- 218992 words of memory out of 5000000
- 11851 multiletter control sequences out of 15000+600000
- 26034 words of font info for 67 fonts, out of 8000000 for 9000
+ 9356 strings out of 494501
+ 135957 string characters out of 6167030
+ 233376 words of memory out of 5000000
+ 12388 multiletter control sequences out of 15000+600000
+ 25258 words of font info for 66 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 43i,11n,45p,554b,341s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
-.enc}</usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-sy10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-super/s
-fbx1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-supe
-r/sfbx1440.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-s
-uper/sfcc1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/c
-m-super/sfrm1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publi
-c/cm-super/sfrm2488.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
-blic/cm-super/sfss0900.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
-/public/cm-super/sfss1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
-pe1/public/cm-super/sfss1728.pfb></usr/local/texlive/2015basic/texmf-dist/fonts
-/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015basic/texmf-dist/fo
-nts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basic/texmf-dist
-/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015basic/texmf-d
-ist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/2015basic/texm
-f-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Thesis.pdf (20 pages, 230498 bytes).
-PDF statistics:
- 223 PDF objects out of 1000 (max. 8388607)
- 183 compressed objects within 2 object streams
- 34 named destinations out of 1000 (max. 500000)
- 107 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 43i,11n,46p,554b,364s stack positions out of 5000i,500n,10000p,200000b,80000s
+!  ==> Fatal error occurred, no output PDF file produced!
