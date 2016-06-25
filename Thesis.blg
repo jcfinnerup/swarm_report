@@ -1,0 +1,59 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: Thesis.aux
+A level-1 auxiliary file: Chapters/introduction.aux
+A level-1 auxiliary file: Chapters/methodology.aux
+A level-1 auxiliary file: Chapters/simulation.aux
+A level-1 auxiliary file: Chapters/design.aux
+A level-1 auxiliary file: Chapters/references.aux
+A level-1 auxiliary file: Chapters/appendix1.aux
+Already encountered file Chapters/appendix1.aux
+---line 51 of file Thesis.aux
+ : \@input{Chapters/appendix1.aux
+ :                               }
+I'm skipping whatever remains of this command
+The style file: alpha.bst
+Database file #1: References.bib
+Warning--empty journal in latteur_drone-based_2016
+You've used 7 entries,
+            2543 wiz_defined-function locations,
+            606 strings with 6361 characters,
+and the built_in function-call counts, 3978 in all, are:
+= -- 386
+> -- 245
+< -- 4
++ -- 91
+- -- 91
+* -- 303
+:= -- 641
+add.period$ -- 23
+call.type$ -- 7
+change.case$ -- 63
+chr.to.int$ -- 7
+cite$ -- 8
+duplicate$ -- 148
+empty$ -- 258
+format.name$ -- 94
+if$ -- 823
+int.to.chr$ -- 1
+int.to.str$ -- 0
+missing$ -- 7
+newline$ -- 39
+num.names$ -- 21
+pop$ -- 70
+preamble$ -- 1
+purify$ -- 70
+quote$ -- 0
+skip$ -- 131
+stack$ -- 0
+substring$ -- 202
+swap$ -- 47
+text.length$ -- 4
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 56
+warning$ -- 1
+while$ -- 35
+width$ -- 8
+write$ -- 93
+(There was 1 error message)

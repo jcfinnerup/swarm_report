@@ -92,17 +92,18 @@
 
 %\include{Chapter2}                                 		%Chapter 2
 \appendix
-\include{Chapters/appendix1}                                 %Appendix A
+\include{Chapters/appendix1}   
+                              %Appendix A
 
 %-----------
 % Backmatter
 %-----------
-\backmatter
-\chaptermark{Bibliography}
+%\backmatter
+\nocite{*}                        
 \renewcommand{\sectionmark}[1]{\markright{#1}}
 \sectionmark{Bibliography}
 \addcontentsline{toc}{chapter}{Bibliography}        %Force addition of Bibliography to TOC
 \bibliographystyle{alpha}                           %Use alpha codes for references
-\bibliography{References}                           %Bibliography file called
+\bibliography{References}  
 \end{document}
 % % % EOF % % %

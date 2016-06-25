@@ -1,0 +1,50 @@
+\newcommand{\etalchar}[1]{$^{#1}$}
+\begin{thebibliography}{SMVDPB05}
+
+\bibitem[BRG{\etalchar{+}}11]{bhattacharjee_multi-robot_2011}
+P.~Bhattacharjee, P.~Rakshit, I.~Goswami, A.~Konar, and A.~K. Nagar.
+\newblock Multi-robot path-planning using artificial bee colony optimization
+  algorithm.
+\newblock In {\em 2011 {Third} {World} {Congress} on {Nature} and
+  {Biologically} {Inspired} {Computing} ({NaBIC})}, pages 219--224, October
+  2011.
+
+\bibitem[CPD{\etalchar{+}}14]{clark_autonomous_2014}
+Ruaridh Clark, Giuliano Punzo, Gordon Dobie, Rahul Summan, Charles~Norman
+  MacLeod, Gareth Pierce, and Malcolm Macdonald.
+\newblock Autonomous swarm testbed with multiple quadcopters.
+\newblock In {\em 1st {World} {Congress} on {Unmanned} {Systems}
+  {Enginenering}, 2014-{WCUSEng}}, 2014.
+
+\bibitem[DHB15]{daftry_building_2015}
+Shreyansh Daftry, Christof Hoppe, and Horst Bischof.
+\newblock Building with drones: {Accurate} 3d facade reconstruction using mavs.
+\newblock In {\em Robotics and {Automation} ({ICRA}), 2015 {IEEE}
+  {International} {Conference} on}, pages 3487--3494. IEEE, 2015.
+
+\bibitem[HM99]{holland_stigmergy_1999}
+Owen Holland and Chris Melhuish.
+\newblock Stigmergy, self-organization, and sorting in collective robotics.
+\newblock {\em Artificial life}, 5(2):173--202, 1999.
+
+\bibitem[LGB{\etalchar{+}}16]{latteur_drone-based_2016}
+Pierre LATTEUR, Sébastien GOESSENS, Jean-Sébastien BRETON, Justin LEPLAT,
+  Zhao MAb, and Caitlin MUELLER.
+\newblock Drone-{Based} {Additive} {Manufacturing} of {Architectural}
+  {Structures}.
+\newblock 2016.
+
+\bibitem[PKG{\etalchar{+}}02]{pettinaro_swarm_2002}
+Giovanni~Cosimo Pettinaro, I.~Kwee, Luca~Maria Gambardella, Francesco Mondada,
+  Dario Floreano, Stefano Nolfi, J.-L. Deneubourg, and Marco Dorigo.
+\newblock Swarm robotics: {A} different approach to service robotics.
+\newblock In {\em 33rd {International} {Symposium} on {Robotics}}, pages
+  71--76, 2002.
+
+\bibitem[SMVDPB05]{sauter_performance_2005}
+John~A. Sauter, Robert Matthews, H.~Van Dyke~Parunak, and Sven~A. Brueckner.
+\newblock Performance of digital pheromones for swarming vehicle control.
+\newblock In {\em Proceedings of the fourth international joint conference on
+  {Autonomous} agents and multiagent systems}, pages 903--910. ACM, 2005.
+
+\end{thebibliography}
