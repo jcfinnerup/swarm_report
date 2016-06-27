@@ -14,7 +14,15 @@ The task of using flying vehicles to perform construction is especially interest
 A construction task work as a great test bed, for testing flying drones as it involves multiple agents working on the same problem as once and as such they must have the ability to plan according to changes in their individual environment. 
 
 One solution to the challenges of enabling drones to collaborate, is to create individual sectors of space in which only a single agent is allowed to move at a certain time. 
-This however is a suboptimal solution and for drones to trulu
+This is a simple way to prevent collisions between the drones, but it also poses some optimization challenges, as the path of the drones cannot intersect. 
+This means that even if a path for a drone towards a goal is optimal (shortest), it cannot be used if it intersects with the path of another agent. 
+Another drawback of this simple solution is that it limits the amount of agents able to act with in a certain space, to a small number, as reach has to have its own designated area. 
+
+As such there is great motivation to design control algorithms, which can enable drones to collaborate on tasks, while allowing them to avoid collisions without limiting their flight space. 
+This thesis focuses on how to create such control algorithms, and how to measure their effectiveness in allowing drones to solve a collaborative problem. 
+The different algorithms will be implemented on a simulation test bed, to compare their complexity and their ability to give optimal movements to the drones within the simulation. 
+Further more, this thesis will document the implementation of the simulation platform and the control algorithms.
+
 
 - from supervised to unsupervised
 - from instructed to self planning
