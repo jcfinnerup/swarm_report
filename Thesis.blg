@@ -14,47 +14,48 @@ Already encountered file Chapters/appendix1.aux
 I'm skipping whatever remains of this command
 The style file: alpha.bst
 Database file #1: References.bib
+Warning--to sort, need author or key in _flying_????
 Warning--empty journal in latteur_drone-based_????
 Warning--empty year in latteur_drone-based_????
-You've used 7 entries,
+You've used 11 entries,
             2543 wiz_defined-function locations,
-            605 strings with 6374 characters,
-and the built_in function-call counts, 3995 in all, are:
-= -- 380
-> -- 270
-< -- 3
-+ -- 102
-- -- 101
-* -- 326
-:= -- 661
-add.period$ -- 22
-call.type$ -- 7
-change.case$ -- 68
-chr.to.int$ -- 7
-cite$ -- 9
-duplicate$ -- 136
-empty$ -- 242
-format.name$ -- 104
-if$ -- 804
-int.to.chr$ -- 1
+            617 strings with 6875 characters,
+and the built_in function-call counts, 5717 in all, are:
+= -- 554
+> -- 345
+< -- 6
++ -- 130
+- -- 128
+* -- 436
+:= -- 909
+add.period$ -- 33
+call.type$ -- 11
+change.case$ -- 94
+chr.to.int$ -- 10
+cite$ -- 15
+duplicate$ -- 209
+empty$ -- 382
+format.name$ -- 134
+if$ -- 1183
+int.to.chr$ -- 2
 int.to.str$ -- 0
-missing$ -- 7
-newline$ -- 38
-num.names$ -- 21
-pop$ -- 74
+missing$ -- 9
+newline$ -- 55
+num.names$ -- 30
+pop$ -- 114
 preamble$ -- 1
-purify$ -- 75
+purify$ -- 105
 quote$ -- 0
-skip$ -- 115
+skip$ -- 185
 stack$ -- 0
-substring$ -- 190
-swap$ -- 37
-text.length$ -- 3
-text.prefix$ -- 0
+substring$ -- 283
+swap$ -- 61
+text.length$ -- 6
+text.prefix$ -- 1
 top$ -- 0
-type$ -- 56
-warning$ -- 2
-while$ -- 34
-width$ -- 8
-write$ -- 91
+type$ -- 88
+warning$ -- 3
+while$ -- 48
+width$ -- 12
+write$ -- 135
 (There was 1 error message)

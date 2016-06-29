@@ -10,32 +10,41 @@ Specifically the area of autonomous flying vehicles is gaining interest with com
 This requires the drone to be able to plan according to changes in the environment as well as being able to coordinate its movements in relation to other drones around it. 
 At a currently more theoretical scale, using flying drones to perform construction tasks has been subject for testing by universities such as \textit{ETH Zurich}, where micro drones were used to construct a 6 meter tall tower \cite{augugliaro_flight_2014}. 
 
-The task of using flying vehicles to perform construction is especially interesting because it combines many of the challenges that face robotics today, as they become more autonomous. 
+The task of using flying vehicles to perform construction is especially interesting because it combines many of the challenges that face robotics today, as agents become more autonomous. 
 A construction task work as a great test bed, for testing flying drones as it involves multiple agents working on the same problem as once and as such they must have the ability to plan according to changes in their individual environment. 
 
 One solution to the challenges of enabling drones to collaborate, is to create individual sectors of space in which only a single agent is allowed to move at a certain time. 
 This is a simple way to prevent collisions between the drones, but it also poses some optimization challenges, as the path of the drones cannot intersect. 
 This means that even if a path for a drone towards a goal is optimal (shortest), it cannot be used if it intersects with the path of another agent. 
-Another drawback of this simple solution is that it limits the amount of agents able to act with in a certain space, to a small number, as reach has to have its own designated area. 
+Another drawback of this simple solution is that it limits the amount of agents able to act with in a certain space, to a small number, as reach has to have its own designated area. As such there is great motivation to design control algorithms, which can enable drones to collaborate on tasks, while allowing them to avoid collisions without limiting their flight space. 
 
-As such there is great motivation to design control algorithms, which can enable drones to collaborate on tasks, while allowing them to avoid collisions without limiting their flight space. 
-This thesis focuses on how to create such control algorithms, and how to measure their effectiveness in allowing drones to solve a collaborative problem. 
+This thesis focuses on how create and use algorithms from the field of swarm robotics as control for flying drones.
 The different algorithms will be implemented on a simulation test bed, to compare their complexity and their ability to give optimal movements to the drones within the simulation. 
-Further more, this thesis will document the implementation of the simulation platform and the control algorithms.
+For the comparison, different metrics will be used measure effectiveness in allowing drones to solve a collaborative problem.
+As a basis for the comparison, this thesis will document the implementation of the simulation platform and the control algorithms.
 
-
-- from supervised to unsupervised
-- from instructed to self planning
-- from ground-based to arial
 \section{Problem Description}
+The following will outline the detailed goal of this thesis, as well as the subgoals necessary to achieve it. 
 
+\subsection{Main Problem}
+To create and use swarm algorithms to enable quadcopters to coordinate their movements in a multi-agent environment. 
 
+\subsection{Sub Problems}
+\label{intro:sub_problems}
+%TODO: make sure this is consistent (last point is badly formulated)
+\begin{itemize}
+	\item{To design and implement a simulation platform, based on a physical model, within which the algorithms can be used to control simulated agents}
+	\item{To design a problem for the agents to collaborate on, to use as a standardized test for performance of the algorithms}
+	\item{To determine the correct metrics for optimizing and comparing the swarm algorithms}
+	\item{To implement swarm algorithms based on existing concepts, and test them using the metrics and the simulation platform}
+	\item{To optimize the control algorithms based on pre mentioned tests, and analyze potential areas of improvement}
+\end{itemize}
 
-
+ 
 \section{Project plan}
 We note that the contents of the project plan is also something we would like to see in the introductory chapter of your thesis. In fact, you can reuse your final project plan (possibly extended) as the introduction. If you prefer to write an introduction from scratch, it is, of course, important that it is consistent with the final project plan.
 
-
+%TODO: this has to be added
 
 % \section{The ``separate document''}
 % It is also important to note that the separate document containing

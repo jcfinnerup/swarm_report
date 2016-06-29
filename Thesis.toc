@@ -7,15 +7,19 @@
 \contentsline {chapter}{Acknowledgements}{vii}{chapter*.4}
 \contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}
 \contentsline {section}{\numberline {1.1}Problem Description}{2}{section.1.1}
-\contentsline {section}{\numberline {1.2}Project plan}{2}{section.1.2}
-\contentsline {chapter}{\numberline {2}Methodology}{3}{chapter.2}
-\contentsline {section}{\numberline {2.1}Simulation construction}{3}{section.2.1}
-\contentsline {section}{\numberline {2.2}Experimentation}{3}{section.2.2}
-\contentsline {section}{\numberline {2.3}Validation}{3}{section.2.3}
-\contentsline {section}{\numberline {2.4}Optimisation}{3}{section.2.4}
-\contentsline {chapter}{\numberline {3}Simulation}{5}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simulation vs. Animation}{5}{section.3.1}
-\contentsline {section}{\numberline {3.2}Reality criterias}{5}{section.3.2}
-\contentsline {section}{\numberline {3.3}Assumptions on Physics}{5}{section.3.3}
-\contentsline {chapter}{\numberline {4}Design}{7}{chapter.4}
-\contentsline {chapter}{Bibliography}{8}{chapter.4}
+\contentsline {subsection}{\numberline {1.1.1}Main Problem}{2}{subsection.1.1.1}
+\contentsline {subsection}{\numberline {1.1.2}Sub Problems}{3}{subsection.1.1.2}
+\contentsline {section}{\numberline {1.2}Project plan}{3}{section.1.2}
+\contentsline {chapter}{\numberline {2}Methodology}{5}{chapter.2}
+\contentsline {section}{\numberline {2.1}Control Problem}{5}{section.2.1}
+\contentsline {section}{\numberline {2.2}Simulation construction}{6}{section.2.2}
+\contentsline {section}{\numberline {2.3}Validation}{6}{section.2.3}
+\contentsline {section}{\numberline {2.4}Metrics}{6}{section.2.4}
+\contentsline {section}{\numberline {2.5}Experimentation}{6}{section.2.5}
+\contentsline {section}{\numberline {2.6}Optimization}{6}{section.2.6}
+\contentsline {chapter}{\numberline {3}Simulation}{7}{chapter.3}
+\contentsline {section}{\numberline {3.1}Simulation vs. Animation}{7}{section.3.1}
+\contentsline {section}{\numberline {3.2}Reality criterias}{7}{section.3.2}
+\contentsline {section}{\numberline {3.3}Assumptions on Physics}{7}{section.3.3}
+\contentsline {chapter}{\numberline {4}Design}{9}{chapter.4}
+\contentsline {chapter}{Bibliography}{10}{chapter.4}

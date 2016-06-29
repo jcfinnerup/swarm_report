@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  25 JUN 2016 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  29 JUN 2016 14:53
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -726,7 +726,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 55.
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=79, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=91, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
@@ -761,7 +761,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]) (./Chapters/preface.tex [3] [4
 
 ]
-<figures/SignatureDummy.jpg, id=114, 257.46187pt x 103.13531pt>
+<figures/SignatureDummy.jpg, id=126, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -786,46 +786,52 @@ Chapter 1.
 [1
 
 
-]) [2]
+]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 36.
+ (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/omscmr.fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 36.
+
+Underfull \vbox (badness 1817) has occurred while \output is active []
+
+ [2])
+[3]
 \openout2 = `Chapters/methodology.aux'.
 
- (./Chapters/methodology.tex
+ (./Chapters/methodology.tex [4
+
+
+
+]
 Chapter 2.
-<figures/SA_accel_with_no_vel_limit.png, id=177, 1427.3325pt x 738.76pt>
+[5] <figures/SA_accel_with_no_vel_limit.png, id=207, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_with_no_vel_limit.png Graphic file (type png)
 
 <use figures/SA_accel_with_no_vel_limit.png>
 Package pdftex.def Info: figures/SA_accel_with_no_vel_limit.png used on input l
-ine 17.
+ine 27.
 (pdftex.def)             Requested size: 276.24316pt x 142.9698pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-) [3
-
-
-
-] [4 <./figures/SA_accel_with_no_vel_limit.png (PNG copy)>]
+) [6 <./figures/SA_accel_with_no_vel_limit.png (PNG copy)>]
 \openout2 = `Chapters/simulation.aux'.
 
-
-(./Chapters/simulation.tex
+ (./Chapters/simulation.tex
 Chapter 3.
-) [5
+) [7
 
 
 
 ]
 \openout2 = `Chapters/design.aux'.
 
- (./Chapters/design.tex [6
+ (./Chapters/design.tex [8
 
 
 
 ]
 Chapter 4.
-) [7]
+) [9]
 \openout2 = `Chapters/references.aux'.
 
 
@@ -836,7 +842,7 @@ No file Chapters/appendix1.tex.
 \openout2 = `Chapters/appendix1.aux'.
 
 No file Chapters/appendix1.tex.
-(./Thesis.bbl [8
+(./Thesis.bbl [10
 
 
 
@@ -846,51 +852,85 @@ No file Chapters/appendix1.tex.
 
 
 ]
-Underfull \hbox (badness 2591) in paragraph at lines 36--41
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 \bibitem[_fl]{_flying_????}
+                                
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.36 \bibitem[_fl]{_flying_????}
+                                
+? 
+[11]
+Underfull \hbox (badness 3635) in paragraph at lines 45--49
+[]\T1/cmr/m/n/10 Pierre LAT-TEUR, Sébastien GOESSENS, Jean-Sébastien
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 45--49
+\T1/cmr/m/n/10 BRE-TON, Justin LEP-LAT, Zhao MAb, and Caitlin
+ []
+
+
+Underfull \hbox (badness 1496) in paragraph at lines 51--56
 \T1/cmr/m/n/10 Francesco Mon-dada, Dario Flo-re-ano, Ste-fano Nolfi, J.-L.
  []
 
-[9])
+)
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 108.
- [10]
+ [12]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 108.
- (./Thesis.aux (./Chapters/introduction.aux)
-(./Chapters/methodology.aux) (./Chapters/simulation.aux) (./Chapters/design.aux
-) (./Chapters/references.aux) (./Chapters/appendix1.aux)
-(./Chapters/appendix1.aux))
+ (./Thesis.aux (./Chapters/introduction.aux) (./Chapters/methodology.aux) (./Ch
+apters/simulation.aux) (./Chapters/design.aux) (./Chapters/references.aux) (./C
+hapters/appendix1.aux) (./Chapters/appendix1.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 108.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 108.
-Package rerunfilecheck Info: File `Thesis.out' has not changed.
-(rerunfilecheck)             Checksum: F13CB0ECBB9D70598D9CD450557626BD;1072.
+
+
+Package rerunfilecheck Warning: File `Thesis.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `Thesis.out':
+(rerunfilecheck)             Before: 632A07EE5F9402F183F27D4407DED653;1279
+(rerunfilecheck)             After:  57378C7C2F5FB5F3EB412EA360D6D094;1336.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9409 strings out of 494501
- 136483 string characters out of 6167030
- 236957 words of memory out of 5000000
- 12396 multiletter control sequences out of 15000+600000
- 25721 words of font info for 66 fonts, out of 8000000 for 9000
+ 9446 strings out of 494501
+ 137203 string characters out of 6167030
+ 237231 words of memory out of 5000000
+ 12419 multiletter control sequences out of 15000+600000
+ 26497 words of font info for 67 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
- 43i,11n,77p,537b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 43i,11n,77p,466b,439s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
 .enc}</usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-super/sfb
-x1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-super/
-sfbx1440.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-sup
-er/sfcc1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/cm-
-super/sfrm1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/
-cm-super/sfrm2488.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publ
-ic/cm-super/sfss0900.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/p
-ublic/cm-super/sfss1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
-1/public/cm-super/sfss1728.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/t
-ype1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015basic/texmf-dist/font
-s/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basic/texmf-dist/f
-onts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015basic/texmf-dis
-t/fonts/type1/public/cm-super/sfti1000.pfb>
-Output written on Thesis.pdf (22 pages, 303229 bytes).
+mi10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publi
+c/cm-super/sfbx1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
+blic/cm-super/sfbx1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
+/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
+pe1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts
+/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015basic/texmf-dist/fo
+nts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2015basic/texmf-dist
+/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2015basic/texmf-d
+ist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015basic/texm
+f-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2015basic/t
+exmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015basi
+c/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015b
+asic/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/20
+15basic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb>
+Output written on Thesis.pdf (24 pages, 351633 bytes).
 PDF statistics:
- 277 PDF objects out of 1000 (max. 8388607)
- 234 compressed objects within 3 object streams
- 51 named destinations out of 1000 (max. 500000)
- 168 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 328 PDF objects out of 1000 (max. 8388607)
+ 278 compressed objects within 3 object streams
+ 61 named destinations out of 1000 (max. 500000)
+ 192 words of extra memory for PDF output out of 10000 (max. 10000000)
 
