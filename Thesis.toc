@@ -12,14 +12,17 @@
 \contentsline {section}{\numberline {1.2}Project plan}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}Methodology}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Control Problem}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Simulation construction}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}Simulation Construction}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Validation}{6}{section.2.3}
-\contentsline {section}{\numberline {2.4}Metrics}{6}{section.2.4}
-\contentsline {section}{\numberline {2.5}Experimentation}{6}{section.2.5}
-\contentsline {section}{\numberline {2.6}Optimization}{6}{section.2.6}
-\contentsline {chapter}{\numberline {3}Simulation}{7}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simulation vs. Animation}{7}{section.3.1}
-\contentsline {section}{\numberline {3.2}Reality criterias}{7}{section.3.2}
-\contentsline {section}{\numberline {3.3}Assumptions on Physics}{7}{section.3.3}
-\contentsline {chapter}{\numberline {4}Design}{9}{chapter.4}
-\contentsline {chapter}{Bibliography}{10}{chapter.4}
+\contentsline {section}{\numberline {2.4}Metrics}{7}{section.2.4}
+\contentsline {section}{\numberline {2.5}Experimentation}{7}{section.2.5}
+\contentsline {section}{\numberline {2.6}Optimization}{7}{section.2.6}
+\contentsline {chapter}{\numberline {3}Simulation}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Simulation vs. Animation}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Reality criterias}{9}{section.3.2}
+\contentsline {section}{\numberline {3.3}Assumptions on Physics}{9}{section.3.3}
+\contentsline {section}{\numberline {3.4}Control Problem}{9}{section.3.4}
+\contentsline {section}{\numberline {3.5}Construction}{9}{section.3.5}
+\contentsline {section}{\numberline {3.6}Validation}{9}{section.3.6}
+\contentsline {chapter}{\numberline {4}Design}{11}{chapter.4}
+\contentsline {chapter}{Bibliography}{12}{chapter.4}
