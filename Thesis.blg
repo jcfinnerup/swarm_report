@@ -4,58 +4,51 @@ The top-level auxiliary file: Thesis.aux
 A level-1 auxiliary file: Chapters/introduction.aux
 A level-1 auxiliary file: Chapters/methodology.aux
 A level-1 auxiliary file: Chapters/simulation.aux
+A level-1 auxiliary file: Chapters/swarm_algorithms.aux
 A level-1 auxiliary file: Chapters/design.aux
-A level-1 auxiliary file: Chapters/references.aux
-A level-1 auxiliary file: Chapters/appendix1.aux
-Already encountered file Chapters/appendix1.aux
----line 51 of file Thesis.aux
- : \@input{Chapters/appendix1.aux
- :                               }
-I'm skipping whatever remains of this command
 The style file: alpha.bst
 Database file #1: References.bib
-Warning--to sort, need author or key in _flying_????
 Warning--empty journal in latteur_drone-based_????
 Warning--empty year in latteur_drone-based_????
-You've used 11 entries,
+You've used 9 entries,
             2543 wiz_defined-function locations,
-            617 strings with 6875 characters,
-and the built_in function-call counts, 5717 in all, are:
-= -- 554
-> -- 345
-< -- 6
-+ -- 130
-- -- 128
-* -- 436
-:= -- 909
-add.period$ -- 33
-call.type$ -- 11
-change.case$ -- 94
-chr.to.int$ -- 10
-cite$ -- 15
-duplicate$ -- 209
-empty$ -- 382
-format.name$ -- 134
-if$ -- 1183
-int.to.chr$ -- 2
+            615 strings with 6916 characters,
+and the built_in function-call counts, 5253 in all, are:
+= -- 511
+> -- 330
+< -- 5
++ -- 124
+- -- 123
+* -- 414
+:= -- 844
+add.period$ -- 29
+call.type$ -- 9
+change.case$ -- 84
+chr.to.int$ -- 9
+cite$ -- 11
+duplicate$ -- 190
+empty$ -- 333
+format.name$ -- 127
+if$ -- 1082
+int.to.chr$ -- 1
 int.to.str$ -- 0
 missing$ -- 9
-newline$ -- 55
-num.names$ -- 30
-pop$ -- 114
+newline$ -- 48
+num.names$ -- 27
+pop$ -- 93
 preamble$ -- 1
-purify$ -- 105
+purify$ -- 93
 quote$ -- 0
-skip$ -- 185
+skip$ -- 166
 stack$ -- 0
-substring$ -- 283
+substring$ -- 276
 swap$ -- 61
-text.length$ -- 6
-text.prefix$ -- 1
+text.length$ -- 5
+text.prefix$ -- 0
 top$ -- 0
-type$ -- 88
-warning$ -- 3
-while$ -- 48
-width$ -- 12
-write$ -- 135
-(There was 1 error message)
+type$ -- 72
+warning$ -- 2
+while$ -- 46
+width$ -- 10
+write$ -- 118
+(There were 2 warnings)

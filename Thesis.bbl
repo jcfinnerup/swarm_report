@@ -1,5 +1,5 @@
 \newcommand{\etalchar}[1]{$^{#1}$}
-\begin{thebibliography}{SMVDPB05b}
+\begin{thebibliography}{SMVDPB05}
 
 \bibitem[ALH{\etalchar{+}}14]{augugliaro_flight_2014}
 F.~Augugliaro, S.~Lupashin, M.~Hamer, C.~Male, M.~Hehn, M.~W. Mueller, J.~S.
@@ -8,6 +8,14 @@ F.~Augugliaro, S.~Lupashin, M.~Hamer, C.~Male, M.~Hehn, M.~W. Mueller, J.~S.
   construction with flying machines.
 \newblock {\em IEEE Control Systems}, 34(4):46--64, August 2014.
 
+\bibitem[AMBR15]{alonso-mora_multi-robot_2015}
+J.~Alonso-Mora, S.~Baker, and D.~Rus.
+\newblock Multi-robot navigation in formation via sequential convex
+  programming.
+\newblock In {\em 2015 {IEEE}/{RSJ} {International} {Conference} on
+  {Intelligent} {Robots} and {Systems} ({IROS})}, pages 4634--4641, September
+  2015.
+
 \bibitem[BRG{\etalchar{+}}11]{bhattacharjee_multi-robot_2011}
 Preetha Bhattacharjee, Pratyusha Rakshit, Indrani Goswami, Amit Konar, and
   Atulya~K. Nagar.
@@ -15,10 +23,6 @@ Preetha Bhattacharjee, Pratyusha Rakshit, Indrani Goswami, Amit Konar, and
   algorithm.
 \newblock In {\em Nature and {Biologically} {Inspired} {Computing} ({NaBIC}),
   2011 {Third} {World} {Congress} on}, pages 219--224. IEEE, 2011.
-
-\bibitem[{Cen}]{center_for_history_and_new_media_zotero_????}
-{Center for History and New Media}.
-\newblock Zotero {Quick} {Start} {Guide}.
 
 \bibitem[CPD{\etalchar{+}}14]{clark_autonomous_2014}
 Ruaridh Clark, Giuliano Punzo, Gordon Dobie, Rahul Summan, Charles~Norman
@@ -32,9 +36,6 @@ Shreyansh Daftry, Christof Hoppe, and Horst Bischof.
 \newblock Building with drones: {Accurate} 3d facade reconstruction using mavs.
 \newblock In {\em Robotics and {Automation} ({ICRA}), 2015 {IEEE}
   {International} {Conference} on}, pages 3487--3494. IEEE, 2015.
-
-\bibitem[_fl]{_flying_????}
-Flying {Machine} {Enabled} {Construction}.
 
 \bibitem[HM99]{holland_stigmergy_1999}
 Owen Holland and Chris Melhuish.
@@ -54,13 +55,7 @@ Giovanni~Cosimo Pettinaro, I.~Kwee, Luca~Maria Gambardella, Francesco Mondada,
 \newblock In {\em 33rd {International} {Symposium} on {Robotics}}, pages
   71--76, 2002.
 
-\bibitem[SMVDPB05a]{sauter_performance_2005}
-John~A. Sauter, Robert Matthews, H.~Van Dyke~Parunak, and Sven~A. Brueckner.
-\newblock Performance of digital pheromones for swarming vehicle control.
-\newblock In {\em Proceedings of the fourth international joint conference on
-  {Autonomous} agents and multiagent systems}, pages 903--910. ACM, 2005.
-
-\bibitem[SMVDPB05b]{sauter_performance_2005-1}
+\bibitem[SMVDPB05]{sauter_performance_2005}
 John~A. Sauter, Robert Matthews, H.~Van Dyke~Parunak, and Sven~A. Brueckner.
 \newblock Performance of digital pheromones for swarming vehicle control.
 \newblock In {\em Proceedings of the fourth international joint conference on
