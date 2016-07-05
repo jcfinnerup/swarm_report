@@ -27,18 +27,7 @@ The comparison of the algorithms tested within this thesis, will be done based o
 The algorithms tested within this thesis and presented as \textit{swarm algorithms} will be covered in depth in Chapter \ref{chap:swarm}. When implementing and testing the algorithms in this paper, the algorithms will be partly implemented through experimentation. This is due to the fact that swarm algorithms such as the \textit{Artificial Bee Colony} (or ABC) \cite{bhattacharjee_multi-robot_2011}, cannot directly be mapped to the issue of controlling quadcopters to perform construction tasks. The ABC has a different number of agents and multiple categories. Because of this, mapping some of the algorithms will involve some experimentation and for the sake of methodology it must be stated that algorithms will undergo a level of personalization when implemented. This will be documented along with how much the algorithms ends up differing from its theoretical counterpart. 
 
 \section{Optimization}
-
-
-
-\begin{figure}[h!]
-  \centering
-  \includegraphics[width=.8\columnwidth]{figures/SA_accel_with_no_vel_limit.png}
-  \caption{Acceleration of agent - without velocity limit}
-  \label{fig:sa_accel_no_vel_adj}
-\end{figure}
-
-
-
+Lastly, the optimization phase refers to the activity of not only mapping the control algorithms to control quadcopters, but also tuning them to attempt maximizing their performance. This will be in benchmarked with the test metrics and the control problem within the simulation. The optimization will only be done on the control algorithms themselves, and not by tuning simulation variables, as all algorithms bust be tested on the same simulation. The simulation variables will be predetermined in the \textit{Validation} phase (see Section \ref{sec:validation}) and hereafter remain static. 
 
 
 
