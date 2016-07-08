@@ -12,20 +12,23 @@
 \contentsline {section}{\numberline {1.2}Project plan}{3}{section.1.2}
 \contentsline {chapter}{\numberline {2}Methodology}{5}{chapter.2}
 \contentsline {section}{\numberline {2.1}Control Problem}{5}{section.2.1}
-\contentsline {section}{\numberline {2.2}Simulation Construction}{6}{section.2.2}
+\contentsline {section}{\numberline {2.2}Simulation Implementation}{6}{section.2.2}
 \contentsline {section}{\numberline {2.3}Validation}{6}{section.2.3}
 \contentsline {section}{\numberline {2.4}Test Metrics}{7}{section.2.4}
-\contentsline {section}{\numberline {2.5}Experimentation}{7}{section.2.5}
+\contentsline {section}{\numberline {2.5}Control Implementation}{7}{section.2.5}
 \contentsline {section}{\numberline {2.6}Optimization}{8}{section.2.6}
 \contentsline {chapter}{\numberline {3}Simulation}{9}{chapter.3}
-\contentsline {section}{\numberline {3.1}Simulation vs. Animation}{10}{section.3.1}
-\contentsline {section}{\numberline {3.2}Reality criterias}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Assumptions on Physics}{10}{section.3.3}
-\contentsline {section}{\numberline {3.4}Control Problem}{10}{section.3.4}
-\contentsline {section}{\numberline {3.5}Test Metrics}{10}{section.3.5}
-\contentsline {section}{\numberline {3.6}Construction}{10}{section.3.6}
-\contentsline {section}{\numberline {3.7}Validation}{10}{section.3.7}
-\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{11}{section.4.1}
-\contentsline {chapter}{\numberline {5}Design}{13}{chapter.5}
-\contentsline {chapter}{Bibliography}{14}{chapter.5}
+\contentsline {section}{\numberline {3.1}Software}{9}{section.3.1}
+\contentsline {section}{\numberline {3.2}Assumptions on Physics}{10}{section.3.2}
+\contentsline {section}{\numberline {3.3}Simulation vs. Animation}{10}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reality Criteria}{10}{section.3.4}
+\contentsline {section}{\numberline {3.5}Implementation}{10}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Gravity \& Impulse}{11}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Gravity}{11}{subsection.3.5.2}
+\contentsline {section}{\numberline {3.6}Validation}{11}{section.3.6}
+\contentsline {section}{\numberline {3.7}Control Problem}{11}{section.3.7}
+\contentsline {section}{\numberline {3.8}Test Metrics}{11}{section.3.8}
+\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{13}{chapter.4}
+\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{13}{section.4.1}
+\contentsline {chapter}{\numberline {5}Design}{15}{chapter.5}
+\contentsline {chapter}{Bibliography}{16}{chapter.5}

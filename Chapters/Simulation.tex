@@ -1,22 +1,54 @@
 
 \chapter{Simulation}
 \label{chap:simulation}
-The simulation environment, hereafter referred to as simple \textit{the simulation}, will be the abstract platform on which the quadcopters and their control algorithsm can be tested. 
+%TODO: Reformulate
+As mentioned previously in this paper, there are many advantages to performing simulation vs. carryings 
+
+
+The simulation environment, hereafter referred to as simple \textit{the simulation}, will be the abstract platform on which the quadcopters and their control algorithm can be tested. 
 In this chapter i will outline the construction of the simulation platform, as well of the validation used to ensure that the simulation follows the required physical mechanics. 
 
-\section{Simulation vs. Animation}
-\label{sec:simulation_animation}
-
-\section{Reality criterias}
-\label{sec:reality}
+\section{Software}
+The software used in this paper to create the simulation platform is Matlab Version 8.7 (R2016a) with Simulink \cite{_matlab_2016}. Simulink was chosen based on its ease of use and ability to perform simulations continuous time. Simulink also has a 3D graphics engine called \texttt{VR3D}\cite{_matlab_2016}, which can be used to model 3D animations from any signal output from the simulation model. I.e. if the simulation models a flying quadcopter, the position values of the quadcopter can be sent as signals to the 3D model. The ability to 3D animate the movements of the quadcopters is important, as \textit{seeing} their actual flight paths can be a simple way to discover errors in either the simulation model or the control algorithm. 
 
 \section{Assumptions on Physics}
 \label{sec:physics}
 
+The goal of the simulation is to simulate multiple flying quadcopters, and as such physical mechanics play an important role of the simulation model. This section will list different physical parameters, a description of them as well as their importance in the simulation model. Due to the desire to limit complexity some physical parameters, such as wind, will be assumed to be non-existent in the simulation model. Others such as gravity and impulse play a more vital role in producing accurate test results.
 
-\section{Construction}
+\begin{table}[h!]
+\centering
+\begin{tabular}{lll}
+%\toprule
+\textbf{Parameter} & \textbf{Description} & \textbf{Importance} \\ 
+%\midrule
+Gravity & Within the simulation, the force of gravity will be modeled as a constant pulling on the objects on the Y-axis with an acceleration of \textbf{9.8} & 2.5 meters \\ 
+%\bottomrule
+\end{tabular}
+\caption{Desired model parameters}
+\label{fig:model_params}
+\end{table}
+
+\section{Simulation vs. Animation}
+\label{sec:simulation_animation}
+
+%TODO mention importance of distribution
+
+\section{Reality Criteria}
+\label{sec:reality}
+
+
+\section{Implementation}
 \label{sec:construction}
 
+After assessing the needs of the simulation model, the actual construction in simulink is done by connecting different modules in a circuit like manner. This section will outline how the different model requirements outlined in Section \ref{sec:physics}, were achieved in a step wise manner. 
+
+
+
+\subsection{Gravity \& Impulse}
+As mentioned in Section \ref{sec:simulation_animation}, it is important the control systems cannot alter the position of the quadcopters directly, but instead provide 
+
+\subsection{Gravity}
 
 
 \section{Validation}
@@ -27,4 +59,5 @@ In this chapter i will outline the construction of the simulation platform, as w
 
 \section{Test Metrics}
 \label{sec:test_metrics}
+
 

@@ -42,11 +42,17 @@ Owen Holland and Chris Melhuish.
 \newblock Stigmergy, self-organization, and sorting in collective robotics.
 \newblock {\em Artificial life}, 5(2):173--202, 1999.
 
-\bibitem[LGB{\etalchar{+}}]{latteur_drone-based_????}
+\bibitem[LGB{\etalchar{+}}16]{latteur_drone-based_2016}
 Pierre LATTEUR, Sébastien GOESSENS, Jean-Sébastien BRETON, Justin LEPLAT,
   Zhao MAb, and Caitlin MUELLER.
 \newblock Drone-{Based} {Additive} {Manufacturing} of {Architectural}
   {Structures}.
+\newblock 2016.
+
+\bibitem[mat16]{matlab_matlab_2016}
+matlab matlab.
+\newblock {MATLAB} and {Simulink} for {Student} {Use} - {Math} software for
+  engineering and science students - {MathWorks} {Nordic}, 2016.
 
 \bibitem[PKG{\etalchar{+}}02]{pettinaro_swarm_2002}
 Giovanni~Cosimo Pettinaro, I.~Kwee, Luca~Maria Gambardella, Francesco Mondada,
