@@ -23,7 +23,7 @@
 \contentsline {section}{\numberline {3.3}Simulation vs. Animation}{10}{section.3.3}
 \contentsline {section}{\numberline {3.4}Reality Criteria}{10}{section.3.4}
 \contentsline {section}{\numberline {3.5}Control Problem}{10}{section.3.5}
-\contentsline {section}{\numberline {3.6}Implementation}{10}{section.3.6}
+\contentsline {section}{\numberline {3.6}Implementation}{11}{section.3.6}
 \contentsline {subsection}{\numberline {3.6.1}Sources and Sinks}{11}{subsection.3.6.1}
 \contentsline {subsection}{\numberline {3.6.2}PID Controller}{11}{subsection.3.6.2}
 \contentsline {subsection}{\numberline {3.6.3}Gravity \& Impulse}{12}{subsection.3.6.3}

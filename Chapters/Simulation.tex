@@ -21,7 +21,7 @@ The goal of the simulation is to simulate multiple flying quadcopters, and as su
 \begin{table}[]
 \centering
 \label{sim:env_specs}
-\begin{tabular}{@{}lll@{}}
+\begin{tabularx}{1\textwidth}{l@{}Xr}
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
 Y-acceleration       & Mechanic to simulate Gravity                                                & 9.8 m/s2       \\
@@ -31,8 +31,8 @@ Number of boxes      & The number of boxes to be moved to their respective goal 
 Mass of box          & The assumed mass of one box throughout the simulation                       & massless       \\
 Maximum velocity     & The limit of the velocity of any object on every axis                       & 15 m/s         \\
 Maximum acceleration & The limit of the acceleration of any object on every axis                   & 9.8 m/s2       \\
-Attach-threshhold     & The maximum distance from an agent to a box, before the box can be attached & 2 cm           \\ \bottomrule
-\end{tabular}
+Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & 2 cm           \\ \bottomrule
+\end{tabularx}
 \caption{Environmental Specifications}
 \end{table}
 \section{Simulation vs. Animation}
