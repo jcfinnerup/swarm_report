@@ -17,23 +17,23 @@ The software used in this paper to create the simulation platform is Matlab Vers
 The goal of the simulation is to simulate multiple flying quadcopters, and as such physical mechanics play an important role of the simulation model. This section will list different physical parameters, a description of them as well as their importance in the simulation model. Due to the desire to limit complexity some physical parameters, such as wind, will be assumed to be non-existent in the simulation model. Others such as gravity and impulse play a more vital role in producing accurate test results.
 
 % Please add the following required packages to your document preamble:
-% \usepackage{booktabs}
 \begin{table}[]
 \centering
-\label{sim:env_specs}
 \begin{tabularx}{1\textwidth}{l@{}Xr}
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
-Y-acceleration       & Mechanic to simulate Gravity                                                & 9.8 m/s2       \\
-Number of agents     & The number of quadcopters acting to solve the control problem               & 5              \\
-Mass of agent        & The assumed mass of one agent throughout the simulation                     & 150 g          \\
-Number of boxes      & The number of boxes to be moved to their respective goal position           & 9              \\
-Mass of box          & The assumed mass of one box throughout the simulation                       & massless       \\
-Maximum velocity     & The limit of the velocity of any object on every axis                       & 15 m/s         \\
-Maximum acceleration & The limit of the acceleration of any object on every axis                   & 9.8 m/s2       \\
-Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & 2 cm           \\ \bottomrule
+Agent-type       	 & What type of agent to be simulated                                          & ${Quadcopter}$     \\
+Y-acceleration       & Mechanic to simulate Gravity                                                & ${9.8m/s^2}$  \\
+Number of agents     & The number of quadcopters acting to solve the control problem               & ${5}$          \\
+Mass of agent        & The assumed mass of one agent throughout the simulation                     & ${150g}$      \\
+Number of boxes      & The number of boxes to be moved to their respective goal position           & ${9}$              \\
+Mass of box          & The assumed mass of one box throughout the simulation                       & ${massless}$       \\
+Maximum velocity     & The limit of the velocity of any object on every axis                       & ${15m/s}$         \\
+Maximum acceleration & The limit of the acceleration of any object on every axis                   & ${9.8m/s^2}$       \\
+Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & ${2cm}$           \\ \bottomrule
 \end{tabularx}
 \caption{Environmental Specifications}
+\label{sim:env_specs}
 \end{table}
 \section{Simulation vs. Animation}
 \label{sec:simulation_animation}
