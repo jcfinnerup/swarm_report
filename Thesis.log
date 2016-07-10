@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  10 JUL 2016 11:02
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  10 JUL 2016 11:08
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -825,10 +825,10 @@ LaTeX Warning: Citation `_matlab_2016' on page 9 undefined on input line 12.
 ]
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 20.
+               Default added (so using `tbp') on input line 21.
 
 
-Underfull \hbox (badness 5924) in paragraph at lines 34--34
+Underfull \hbox (badness 5771) in paragraph at lines 35--35
 []|\T1/cmr/m/n/10 The as-sumed mass of one agent
  []
 
@@ -836,11 +836,11 @@ Underfull \hbox (badness 5924) in paragraph at lines 34--34
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
-<figures/model_overview.png, id=304, 737.75626pt x 390.45876pt>
+<figures/model_overview.png, id=305, 737.75626pt x 390.45876pt>
 File: figures/model_overview.png Graphic file (type png)
 
 <use figures/model_overview.png>
-Package pdftex.def Info: figures/model_overview.png used on input line 58.
+Package pdftex.def Info: figures/model_overview.png used on input line 59.
 (pdftex.def)             Requested size: 345.30264pt x 182.75302pt.
  [11 <./figures/model_overview.png>]) [12]
 \openout2 = `Chapters/swarm_algorithms.aux'.
@@ -914,10 +914,10 @@ exmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basi
 c/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015b
 asic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/20
 15basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Thesis.pdf (30 pages, 439606 bytes).
+Output written on Thesis.pdf (30 pages, 440872 bytes).
 PDF statistics:
- 429 PDF objects out of 1000 (max. 8388607)
- 371 compressed objects within 4 object streams
+ 430 PDF objects out of 1000 (max. 8388607)
+ 372 compressed objects within 4 object streams
  78 named destinations out of 1000 (max. 500000)
  288 words of extra memory for PDF output out of 10000 (max. 10000000)
 
