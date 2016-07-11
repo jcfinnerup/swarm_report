@@ -19,18 +19,26 @@
 \contentsline {section}{\numberline {2.6}Optimization}{8}{section.2.6}
 \contentsline {chapter}{\numberline {3}Simulation}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Software}{9}{section.3.1}
-\contentsline {section}{\numberline {3.2}Specifications \& Assumptions on Physics}{10}{section.3.2}
-\contentsline {section}{\numberline {3.3}Simulation vs. Animation}{11}{section.3.3}
-\contentsline {section}{\numberline {3.4}Reality Criteria}{11}{section.3.4}
-\contentsline {section}{\numberline {3.5}Control Problem}{11}{section.3.5}
-\contentsline {section}{\numberline {3.6}Implementation}{11}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Sources and Sinks}{12}{subsection.3.6.1}
-\contentsline {subsection}{\numberline {3.6.2}PID Controller}{12}{subsection.3.6.2}
-\contentsline {subsection}{\numberline {3.6.3}Gravity \& Impulse}{12}{subsection.3.6.3}
-\contentsline {subsection}{\numberline {3.6.4}Control Loop Controller}{12}{subsection.3.6.4}
-\contentsline {section}{\numberline {3.7}Validation}{12}{section.3.7}
-\contentsline {section}{\numberline {3.8}Test Metrics}{12}{section.3.8}
-\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{13}{chapter.4}
-\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{13}{section.4.1}
-\contentsline {chapter}{\numberline {5}Design}{15}{chapter.5}
-\contentsline {chapter}{Bibliography}{16}{chapter.5}
+\contentsline {section}{\numberline {3.2}Specifications}{10}{section.3.2}
+\contentsline {subsection}{\numberline {3.2.1}Assumptions on physics}{10}{subsection.3.2.1}
+\contentsline {subsection}{\numberline {3.2.2}Agents}{11}{subsection.3.2.2}
+\contentsline {subsection}{\numberline {3.2.3}Simulation Environment}{11}{subsection.3.2.3}
+\contentsline {section}{\numberline {3.3}Simulation vs. Animation}{12}{section.3.3}
+\contentsline {section}{\numberline {3.4}Reality Criteria}{12}{section.3.4}
+\contentsline {section}{\numberline {3.5}Control Problem}{12}{section.3.5}
+\contentsline {section}{\numberline {3.6}Implementation}{12}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Sources and Sinks}{13}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.6.2}PID Controller}{13}{subsection.3.6.2}
+\contentsline {subsection}{\numberline {3.6.3}Gravity \& Mass}{13}{subsection.3.6.3}
+\contentsline {subsection}{\numberline {3.6.4}Control Loop}{13}{subsection.3.6.4}
+\contentsline {subsection}{\numberline {3.6.5}Data Stores}{13}{subsection.3.6.5}
+\contentsline {subsection}{\numberline {3.6.6}Measurements}{13}{subsection.3.6.6}
+\contentsline {subsection}{\numberline {3.6.7}Completion Check}{13}{subsection.3.6.7}
+\contentsline {section}{\numberline {3.7}Validation}{13}{section.3.7}
+\contentsline {subsection}{\numberline {3.7.1}Adjusting for desired behavior}{14}{subsection.3.7.1}
+\contentsline {section}{\numberline {3.8}Test Metrics}{15}{section.3.8}
+\contentsline {subsection}{\numberline {3.8.1}Testing on shortest path}{15}{subsection.3.8.1}
+\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{17}{section.4.1}
+\contentsline {chapter}{\numberline {5}Design}{19}{chapter.5}
+\contentsline {chapter}{Bibliography}{20}{chapter.5}

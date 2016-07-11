@@ -14,17 +14,44 @@ The software used in this paper to create the simulation platform is Matlab Vers
 \section{Specifications}
 \label{sec:physics}
 
-The goal of the simulation is to simulate multiple flying quadcopters, and as such physical mechanics play an important role of the simulation model. This section will list the specifications of the simulation environment as well as some physical parameters. Due to the desire to limit complexity some physical parameters, such as wind, will be assumed to be non-existent in the simulation model. Others such as gravity and impulse must be included in the model, as they play a more vital role in producing accurate test results. The overall specifications can be found in Table \ref{tab:env_specs}
+This section will outline the specifications of the simulation platform, after which it is designed. Please note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are results of an iterative design process and tuning the simulation. 
 
 \subsection{Assumptions on physics}
 \label{sec:physics}
 
+The goal of the simulation is to simulate multiple flying quadcopters, and as such physical mechanics play an important role of the simulation model. This section will list the specifications of the simulation environment as well as some physical parameters. Due to the desire to limit complexity some physical parameters, such as wind, will be assumed to be non-existent in the simulation model. Others such as gravity and impulse must be included in the model, as they play a more vital role in producing accurate test results. The specifications of the physical parameters can be found in Table \ref{tab:env_specs}, followed by a brief reasoning behind the parameter.
+
+% Physics Specifications
+\begin{table}[H]
+\centering
+\begin{tabularx}{.7\textwidth}{lX}
+\toprule
+\textbf{Parameter} & \textbf{Role in simulation}\\ \midrule
+Gravity           & Simulated                   \\
+Mass/Impulse      & Simulated                   \\
+Collisions        & Detected, but not simulated \\
+Friction          & Not simulated               \\
+Wind resistance   & Not simulated               \\ \bottomrule
+\end{tabularx}
+\caption{Physical parameters}
+\label{tab:physics}
+\end{table}
+
+\begin{itemize}
+\item{\textbf{Gravity} is an essential part of the simulation, as the control algorithm has to be tested in an environment where objects behave with close real-life resemblance} 
+\item{\textbf{Mass} as well as the impulse that an object has when in movement, is an important aspect since it relates to how much force is required to affect the movement of an object}
+\item{\textbf{Collisions} are important as well as they are used as a test metric for how well the control algorithms will be doing. They are however not important when happening, as long as they can be detected and noted for the purpose of improving the algorithms}
+\item{\textbf{}}
+\end{itemize}
+
+
 \subsection{Agents}
 \label{sec:agents}
-% Please add the following required packages to your document preamble:
-\begin{table}[]
+
+% Agent Specifications
+\begin{table}[H]
 \centering
-\begin{tabularx}{1\textwidth}{l@{}Xr}
+\begin{tabularx}{1\textwidth}{l@{ }Xr}
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
 Agent-type       	 & What type of agent to be simulated                                          & ${Quadcopter}$ \\
@@ -38,18 +65,19 @@ Mass of agent     	 & The number of quadcopters acting to solve the control prob
 
 \subsection{Simulation Environment}
 \label{sec:environment}
-% Please add the following required packages to your document preamble:
-\begin{table}[]
+
+% Environment Specifications
+\begin{table}[H]
 \centering
-\begin{tabularx}{1\textwidth}{l@{}Xr}
+\begin{tabularx}{1\textwidth}{l@{ }Xr}
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
 Y-acceleration       & Mechanic to simulate Gravity                                                & ${9.8m/s^2}$  \\
 Number of agents     & The number of quadcopters acting to solve the control problem               & ${5}$          \\
 Number of boxes      & The number of boxes to be moved to their respective goal position           & ${9}$              \\
 Mass of box          & The assumed mass of one box throughout the simulation                       & ${massless}$       \\
-Maximum velocity     & The limit of the velocity of any object on every axis                       & ${15m/s}$         \\
-Maximum acceleration & The limit of the acceleration of any object on every axis                   & ${9.8m/s^2}$       \\
+Max. velocity     & The limit of the velocity of any object on every axis                       & ${15m/s}$         \\
+Max. acceleration & The limit of the acceleration of any object on every axis                   & ${9.8m/s^2}$       \\
 Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & ${2cm}$           \\ \bottomrule
 \end{tabularx}
 \caption{Environmental Specifications}
@@ -74,7 +102,7 @@ The Control Problem of the simulation, will be a construction task.
 After assessing the needs of the simulation model, the actual construction in simulink is done by connecting different modules in a circuit like manner. Explanations of the simulation construction will be done with references to the finished model, which can be seen in Figure \ref{fig:model_overview}. The modules and submodules of the simulation model have been labeled with a title, describing their function. 
 
 % FIGURE
-\begin{figure}[h!]
+\begin{figure}[H]
   \centering
   \includegraphics[width=1\columnwidth]{figures/model_overview}
   \caption{\label{fig:model_overview}Overview of finished model in Simulink}
@@ -88,14 +116,57 @@ The simulation is carried out with a start and an endpoint
 \subsection{PID Controller}
 As mentioned in Section \ref{sec:simulation_animation}, it is important the control systems cannot alter the position of the quadcopters directly, but instead gives instructions to the quadcopters to change their thrust etc. 
 
-\subsection{Gravity \& Impulse}
+Force, the parameter that is adjusted to achieve a desired position
 
-\subsection{Control Loop Controller}
+\subsection{Gravity \& Mass}
+
+\subsection{Control Loop}
+
+\subsection{Data Stores}
+
+\subsection{Measurements}
+
+\subsection{Completion Check}
 
 \section{Validation}
 \label{sec:validation}
 
+Validation on single agent level
+
+\subsection{Adjusting for desired behavior}
+\label{sec:tuning}
+
+% Pre adjustment
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/SA_accel_pre_adjustment}
+  \caption{\label{fig:pre_adjust}Agent acceleration before adjustment}
+\end{figure}
+
+Stable but too tall
+
+% Post adjustment
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/SA_accel_pre_post_p_adjustment}
+  \caption{\label{fig:post_adjust}Agent acceleration after adjustment of PD gains}
+\end{figure}
+
+short but unstable
+
+% Post limitation
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/SA_accel_post_final_adjustment}
+  \caption{\label{fig:post_limit}Agent acceleration with acceleration}
+\end{figure}
+
+Shorter and wider is stable
+
 \section{Test Metrics}
 \label{sec:test_metrics}
+
+\subsection{Testing on shortest path}
+
 
 
