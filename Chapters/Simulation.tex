@@ -37,16 +37,19 @@ Wind resistance   & Not simulated               \\ \bottomrule
 \label{tab:physics}
 \end{table}
 
+% Bullet points PHYSICS
 \begin{itemize}
-\item{\textbf{Gravity} is an essential part of the simulation, as the control algorithm has to be tested in an environment where objects behave with close real-life resemblance} 
+\item{\textbf{Gravity} is an essential part of the simulation, as the control algorithm has to be tested in an environment where objects behave with close real-life resemblance. Please see \ref{sec:sim_gravity} for the implementation of this mechanic} 
 \item{\textbf{Mass} as well as the impulse that an object has when in movement, is an important aspect since it relates to how much force is required to affect the movement of an object}
-\item{\textbf{Collisions} are important as well as they are used as a test metric for how well the control algorithms will be doing. They are however not important when happening, as long as they can be detected and noted for the purpose of improving the algorithms}
-\item{\textbf{}}
+\item{\textbf{Collisions} are important as well as they are used as a test metric for how well the control algorithms are performing. They are however not important to simulate or animate in 3D, as long as they can be detected. As such they are simply detected, to avoid adding complexity}
+\item{\textbf{Friction} to objects such as the friction between boxes, is assumed to be non-existent in the simulation. This also applies for the quadcopter's ability to carry the boxes, as it is assumed to always to functioning}
 \end{itemize}
 
 
 \subsection{Agents}
 \label{sec:agents}
+
+The \textit{Agents} within the simulation refer to the drones. The word agent is used as the problem of this thesis, can be mapped as a multi-agent problem with each drone acting as an individual agent. Table \ref{tab:agent_specs} shows the specifications of the agents in the simulation and is followed by description of, and a reasoning behind each specification. 
 
 % Agent Specifications
 \begin{table}[H]
@@ -63,6 +66,15 @@ Mass of agent     	 & The number of quadcopters acting to solve the control prob
 \label{tab:agent_specs}
 \end{table}
 
+
+%Bullet Points AGENTS
+\begin{itemize}
+\item{The \textbf{agent-type} is important to not be changed throughout the simulation, as this determines which control surfaces and abilities an agent has. The quadcopter type is chosen because it is most common test platform for micro aerial vehicle (or MAV) control algorithms, and has for many become synonymous with the word \textit{drone} }	
+\item{\textbf{}}	
+\item{\textbf{}}	
+\item{\textbf{}}	
+
+\end{itemize}
 \subsection{Simulation Environment}
 \label{sec:environment}
 
@@ -114,11 +126,16 @@ The following subsections will outline how the different model requirements outl
 The simulation is carried out with a start and an endpoint 
 
 \subsection{PID Controller}
+\label{sec:sim_pid}
+
 As mentioned in Section \ref{sec:simulation_animation}, it is important the control systems cannot alter the position of the quadcopters directly, but instead gives instructions to the quadcopters to change their thrust etc. 
 
 Force, the parameter that is adjusted to achieve a desired position
 
+base on reference, that PID is used for balancing etc...
+
 \subsection{Gravity \& Mass}
+\label{sec:sim_gravity}
 
 \subsection{Control Loop}
 
