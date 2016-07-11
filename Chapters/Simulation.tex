@@ -66,15 +66,13 @@ Mass of agent     	 & The number of quadcopters acting to solve the control prob
 \label{tab:agent_specs}
 \end{table}
 
-
 %Bullet Points AGENTS
 \begin{itemize}
-\item{The \textbf{agent-type} is important to not be changed throughout the simulation, as this determines which control surfaces and abilities an agent has. The quadcopter type is chosen because it is most common test platform for micro aerial vehicle (or MAV) control algorithms, and has for many become synonymous with the word \textit{drone} }	
-\item{\textbf{}}	
-\item{\textbf{}}	
-\item{\textbf{}}	
-
+\item{The \textbf{agent-type} is important to not be changed throughout the simulation, as this determines which control surfaces and abilities an agent has. The quadcopter type is chosen because it is most common test platform for micro aerial vehicle (or MAV) control algorithms, and has for many become synonymous with the word \textit{drone} \cite{augugliaro_flight_2014}}	
+\item{\textbf{Local Control} does not refer to the control algorithm that the quadcopters use to navigate, but rather the algorithm which stabilizes each machine individually. This is a fairly standard and well tested part of modern quadcopters, and as such a standard library from Simulink is used for the desired effect. Please see \ref{sec:sim_pid} for the implementation of this}	
+\item{\textbf{Mass of the agent} is implemented through a combination of both the gravitational mechanic and the PD controller library provided by Simulink. ${150g}$ is chosen as this is a common weight for MAVs}
 \end{itemize}
+
 \subsection{Simulation Environment}
 \label{sec:environment}
 
