@@ -11,8 +11,8 @@ In this chapter i will outline the construction of the simulation platform, as w
 \section{Software}
 The software used in this paper to create the simulation platform is Matlab Version 8.7 (R2016a) with Simulink \cite{_matlab_2016}. Simulink was chosen based on its ease of use and ability to perform simulations continuous time. Simulink also has a 3D graphics engine called \texttt{VR3D}\cite{_matlab_2016}, which can be used to model 3D animations from any signal output from the simulation model. I.e. if the simulation models a flying quadcopter, the position values of the quadcopter can be sent as signals to the 3D model. The ability to 3D animate the movements of the quadcopters is important, as \textit{seeing} their actual flight paths can be a simple way to discover errors in either the simulation model or the control algorithm. 
 
-\section{Specifications}
-\label{sec:physics}
+\section{Design}
+\label{sec:design}
 
 This section will outline the specifications of the simulation platform, after which it is designed. Please note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are results of an iterative design process and tuning the simulation. 
 
@@ -58,6 +58,7 @@ The \textit{Agents} within the simulation refer to the drones. The word agent is
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
 Agent-type       	 & What type of agent to be simulated                                          & ${Quadcopter}$ \\
+Size       		 	 & The space occupied by an agent                                    		   & ${15x15x2cm}$ \\
 Local Control        & The low-level control system which balances and controls the agent position & ${Simulink PD}$\\
 Mass of agent     	 & The number of quadcopters acting to solve the control problem               & ${150g}$        \\
 \bottomrule
@@ -68,7 +69,8 @@ Mass of agent     	 & The number of quadcopters acting to solve the control prob
 
 %Bullet Points AGENTS
 \begin{itemize}
-\item{The \textbf{agent-type} is important to not be changed throughout the simulation, as this determines which control surfaces and abilities an agent has. The quadcopter type is chosen because it is most common test platform for micro aerial vehicle (or MAV) control algorithms, and has for many become synonymous with the word \textit{drone} \cite{augugliaro_flight_2014}}	
+\item{The \textbf{agent-type} is important to not be changed throughout the simulation, as this determines which control surfaces and abilities an agent has. The quadcopter type is chosen because it is most common test platform for micro aerial vehicle (or MAV) control algorithms, and has for many become synonymous with the word \textit{drone} \cite{augugliaro_flight_2014}}
+\item{\textbf{Size} refers to the volume of space taken up by an agent. To reduce complexity an agent is represented by four arms and a center sphere in the simulation. A collision is defined by two or more agent's overlapping each others current space}	
 \item{\textbf{Local Control} does not refer to the control algorithm that the quadcopters use to navigate, but rather the algorithm which stabilizes each machine individually. This is a fairly standard and well tested part of modern quadcopters, and as such a standard library from Simulink is used for the desired effect. Please see \ref{sec:sim_pid} for the implementation of this}	
 \item{\textbf{Mass of the agent} is implemented through a combination of both the gravitational mechanic and the PD controller library provided by Simulink. ${150g}$ is chosen as this is a common weight for MAVs}
 \end{itemize}
@@ -76,23 +78,39 @@ Mass of agent     	 & The number of quadcopters acting to solve the control prob
 \subsection{Simulation Environment}
 \label{sec:environment}
 
+This subsection outlines the specifications for the simulation environment. This refers to the specific values of the physical mechanics used to simulate a real world environment, as well as the number of objects in, and the size of the simulated environment. These can be found in Table\ref{tab:env_specs}
+
 % Environment Specifications
 \begin{table}[H]
 \centering
 \begin{tabularx}{1\textwidth}{l@{ }Xr}
 \toprule
 \textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
-Y-acceleration       & Mechanic to simulate Gravity                                                & ${9.8m/s^2}$  \\
+Gravity		       & Mechanic to simulate Gravity                                                  & ${9.8m/s^2}$  \\
+Dimensionality		 & The number of space dimensions               							   & ${3D}$          \\
+Floor size			 & The floor size relating to the area of the simulation				       & ${300x100cm}$          \\
 Number of agents     & The number of quadcopters acting to solve the control problem               & ${5}$          \\
 Number of boxes      & The number of boxes to be moved to their respective goal position           & ${9}$              \\
 Mass of box          & The assumed mass of one box throughout the simulation                       & ${massless}$       \\
-Max. velocity     & The limit of the velocity of any object on every axis                       & ${15m/s}$         \\
-Max. acceleration & The limit of the acceleration of any object on every axis                   & ${9.8m/s^2}$       \\
+Max. velocity        & The limit of the velocity of any object on every axis                          & ${15m/s}$         \\
+Max. acceleration    & The limit of the acceleration of any object on every axis                      & ${9.8m/s^2}$       \\
 Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & ${2cm}$           \\ \bottomrule
 \end{tabularx}
 \caption{Environmental Specifications}
 \label{tab:env_specs}
 \end{table}
+
+\begin{itemize}
+\item{\textbf{Gravity} as mentioned in Table \ref{tab:physics} the and is simulated as a force pulling on the Y-axis of the simulation with the normal gravitational acceleration of ${9.8m/s^2}$}	
+\item{\textbf{Dimensionality} is set to 3 dimensions. Having a 2-dimensional simulation could have worked for some applications, however one of the challenges of mapping swarm algorithms to controlling drones, is the 3rd dimension. As such, having the simulation be in 3 dimensions is necessary and cannot be scaled down to reduce complexity without affecting the validity of the test results}	
+\item{The \textbf{floor size} of the simulation platform is chosen to be ${300x100cm}$ , where the height is infinite. This is relatively small, but sufficient as the size of the drones are ${15x15x2cm}$, giving them plenty of space to move in}	
+\item{\textbf{Number of agents} and are chosen to be 5. Initially the reasoning behind this was for testing purposes, but when experimentation with the swarm algorithms started, the 5 agents turned out to be posing the same challenges as a higher number due to the size of simulation environment. Therefore a higher number isn't needed}	
+\item{\textbf{Number of boxes} ALRIGHT THIS NEEDS TO BE ADJUSTED %TODO ADJUST}	
+\item{The \textbf{mass of a box} is central to the performance of the control algorithms as it changes the total mass of the drone when carried. To reduce the complexity of the simulation however, these have been assumed to be massless and will as such not affect the drones movement}	
+\item{\textbf{}}	
+\item{\textbf{}}	
+\item{\textbf{}}	
+\end{itemize}
 
 \section{Simulation vs. Animation}
 \label{sec:simulation_animation}
