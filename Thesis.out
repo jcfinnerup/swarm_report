@@ -16,27 +16,26 @@
 \BOOKMARK [1][]{section.2.5}{2.5 Control Implementation}{chapter.2}% 16
 \BOOKMARK [1][]{section.2.6}{2.6 Optimization}{chapter.2}% 17
 \BOOKMARK [0][]{chapter.3}{3 Simulation}{}% 18
-\BOOKMARK [1][]{section.3.1}{3.1 Software}{chapter.3}% 19
-\BOOKMARK [1][]{section.3.2}{3.2 Specifications}{chapter.3}% 20
-\BOOKMARK [2][]{subsection.3.2.1}{3.2.1 Assumptions on physics}{section.3.2}% 21
-\BOOKMARK [2][]{subsection.3.2.2}{3.2.2 Agents}{section.3.2}% 22
-\BOOKMARK [2][]{subsection.3.2.3}{3.2.3 Simulation Environment}{section.3.2}% 23
-\BOOKMARK [1][]{section.3.3}{3.3 Simulation vs. Animation}{chapter.3}% 24
-\BOOKMARK [1][]{section.3.4}{3.4 Reality Criteria}{chapter.3}% 25
-\BOOKMARK [1][]{section.3.5}{3.5 Control Problem}{chapter.3}% 26
-\BOOKMARK [1][]{section.3.6}{3.6 Implementation}{chapter.3}% 27
-\BOOKMARK [2][]{subsection.3.6.1}{3.6.1 Sources and Sinks}{section.3.6}% 28
-\BOOKMARK [2][]{subsection.3.6.2}{3.6.2 PID Controller}{section.3.6}% 29
-\BOOKMARK [2][]{subsection.3.6.3}{3.6.3 Gravity \046 Mass}{section.3.6}% 30
-\BOOKMARK [2][]{subsection.3.6.4}{3.6.4 Control Loop}{section.3.6}% 31
-\BOOKMARK [2][]{subsection.3.6.5}{3.6.5 Data Stores}{section.3.6}% 32
-\BOOKMARK [2][]{subsection.3.6.6}{3.6.6 Measurements}{section.3.6}% 33
-\BOOKMARK [2][]{subsection.3.6.7}{3.6.7 Completion Check}{section.3.6}% 34
-\BOOKMARK [1][]{section.3.7}{3.7 Validation}{chapter.3}% 35
-\BOOKMARK [2][]{subsection.3.7.1}{3.7.1 Adjusting for desired behavior}{section.3.7}% 36
-\BOOKMARK [1][]{section.3.8}{3.8 Test Metrics}{chapter.3}% 37
-\BOOKMARK [2][]{subsection.3.8.1}{3.8.1 Testing on shortest path}{section.3.8}% 38
-\BOOKMARK [0][]{chapter.4}{4 Swarm Logic \046 Swarm Algorithms}{}% 39
-\BOOKMARK [1][]{section.4.1}{4.1 Multi-body vs. Multi-agent path planning}{chapter.4}% 40
-\BOOKMARK [0][]{chapter.5}{5 Design}{}% 41
-\BOOKMARK [0][]{chapter.5}{Bibliography}{}% 42
+\BOOKMARK [1][]{section.3.1}{3.1 Simulation vs. Animation}{chapter.3}% 19
+\BOOKMARK [1][]{section.3.2}{3.2 Software}{chapter.3}% 20
+\BOOKMARK [1][]{section.3.3}{3.3 Design}{chapter.3}% 21
+\BOOKMARK [2][]{subsection.3.3.1}{3.3.1 Control Problem}{section.3.3}% 22
+\BOOKMARK [2][]{subsection.3.3.2}{3.3.2 Assumptions on physics}{section.3.3}% 23
+\BOOKMARK [2][]{subsection.3.3.3}{3.3.3 Agents}{section.3.3}% 24
+\BOOKMARK [2][]{subsection.3.3.4}{3.3.4 Simulation Environment}{section.3.3}% 25
+\BOOKMARK [1][]{section.3.4}{3.4 Implementation}{chapter.3}% 26
+\BOOKMARK [2][]{subsection.3.4.1}{3.4.1 Sources and Sinks}{section.3.4}% 27
+\BOOKMARK [2][]{subsection.3.4.2}{3.4.2 PID Controller}{section.3.4}% 28
+\BOOKMARK [2][]{subsection.3.4.3}{3.4.3 Gravity \046 Mass}{section.3.4}% 29
+\BOOKMARK [2][]{subsection.3.4.4}{3.4.4 Control Loop}{section.3.4}% 30
+\BOOKMARK [2][]{subsection.3.4.5}{3.4.5 Data Stores}{section.3.4}% 31
+\BOOKMARK [2][]{subsection.3.4.6}{3.4.6 Measurements}{section.3.4}% 32
+\BOOKMARK [2][]{subsection.3.4.7}{3.4.7 Completion Check}{section.3.4}% 33
+\BOOKMARK [1][]{section.3.5}{3.5 Validation}{chapter.3}% 34
+\BOOKMARK [2][]{subsection.3.5.1}{3.5.1 Adjusting for desired behavior}{section.3.5}% 35
+\BOOKMARK [1][]{section.3.6}{3.6 Test Metrics}{chapter.3}% 36
+\BOOKMARK [2][]{subsection.3.6.1}{3.6.1 Testing on shortest path}{section.3.6}% 37
+\BOOKMARK [0][]{chapter.4}{4 Swarm Logic \046 Swarm Algorithms}{}% 38
+\BOOKMARK [1][]{section.4.1}{4.1 Multi-body vs. Multi-agent path planning}{chapter.4}% 39
+\BOOKMARK [0][]{chapter.5}{5 Design}{}% 40
+\BOOKMARK [0][]{chapter.5}{Bibliography}{}% 41

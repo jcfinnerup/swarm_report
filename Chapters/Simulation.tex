@@ -8,13 +8,30 @@ As mentioned previously in this paper, there are many advantages to performing s
 The simulation environment, hereafter referred to as simple \textit{the simulation}, will be the abstract platform on which the quadcopters and their control algorithm can be tested. 
 In this chapter i will outline the construction of the simulation platform, as well of the validation used to ensure that the simulation follows the required physical mechanics. 
 
+\section{Simulation vs. Animation}
+\label{sec:simulation_animation}
+
+%TODO mention importance of distribution
+
 \section{Software}
 The software used in this paper to create the simulation platform is Matlab Version 8.7 (R2016a) with Simulink \cite{_matlab_2016}. Simulink was chosen based on its ease of use and ability to perform simulations continuous time. Simulink also has a 3D graphics engine called \texttt{VR3D}\cite{_matlab_2016}, which can be used to model 3D animations from any signal output from the simulation model. I.e. if the simulation models a flying quadcopter, the position values of the quadcopter can be sent as signals to the 3D model. The ability to 3D animate the movements of the quadcopters is important, as \textit{seeing} their actual flight paths can be a simple way to discover errors in either the simulation model or the control algorithm. 
 
 \section{Design}
 \label{sec:design}
+This section will outline the specifications of the simulation platform, after which it is designed. Please note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are the result of an iterative design process and tuning the simulation. 
 
-This section will outline the specifications of the simulation platform, after which it is designed. Please note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are results of an iterative design process and tuning the simulation. 
+\subsection{Control Problem}
+\label{sec:control_problem}
+The goal of the control problem is to challenge the control algorithms such that they can be compared. The control problem chosen for the purpose of this thesis, will be for the agents to collaborate on assembling a structure. The structure will be made of boxes or bricks (hereafter referred to only as boxes), which the agents are able to lift and relocate. The starting position of the boxes will be in one end of the rectangular environment, where the assembled structure will be in the other end. This type of setup requires movement by the agents in close proximity to each other, which introduces the risk of collision. This type of problem must also be solved in a specific order, such that the bottom of the structure is created first etc.
+The control algorithm will be given the position of boxes as well as the position for the proposed bricks in the completed structure.
+The measurements used to test the performance of the control algorithm on this problem are outlined in \ref{sec:test_metrics}. Figure \ref{fig:2d_overview} shows the design of the simulation environment, with the control problem and the agents viewed from the top.
+
+% Control problem
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/2d_overview}
+  \caption{\label{fig:2d_overview}Design of simulation environment, as viewed from above}
+\end{figure}
 
 \subsection{Assumptions on physics}
 \label{sec:physics}
@@ -92,7 +109,7 @@ Floor size			 & The floor size relating to the area of the simulation				       
 Number of agents     & The number of quadcopters acting to solve the control problem               & ${5}$          \\
 Number of boxes      & The number of boxes to be moved to their respective goal position           & ${9}$              \\
 Mass of box          & The assumed mass of one box throughout the simulation                       & ${massless}$       \\
-Max. velocity        & The limit of the velocity of any object on every axis                          & ${15m/s}$         \\
+Max. velocity        & The limit of the velocity of any object on every axis                          & ${15cm/s}$         \\
 Max. acceleration    & The limit of the acceleration of any object on every axis                      & ${9.8m/s^2}$       \\
 Attach threshold     & The maximum distance from an agent to a box, before the box can be attached & ${2cm}$           \\ \bottomrule
 \end{tabularx}
@@ -105,24 +122,13 @@ Attach threshold     & The maximum distance from an agent to a box, before the b
 \item{\textbf{Dimensionality} is set to 3 dimensions. Having a 2-dimensional simulation could have worked for some applications, however one of the challenges of mapping swarm algorithms to controlling drones, is the 3rd dimension. As such, having the simulation be in 3 dimensions is necessary and cannot be scaled down to reduce complexity without affecting the validity of the test results}	
 \item{The \textbf{floor size} of the simulation platform is chosen to be ${300x100cm}$ , where the height is infinite. This is relatively small, but sufficient as the size of the drones are ${15x15x2cm}$, giving them plenty of space to move in}	
 \item{\textbf{Number of agents} and are chosen to be 5. Initially the reasoning behind this was for testing purposes, but when experimentation with the swarm algorithms started, the 5 agents turned out to be posing the same challenges as a higher number due to the size of simulation environment. Therefore a higher number isn't needed}	
-\item{\textbf{Number of boxes} ALRIGHT THIS NEEDS TO BE ADJUSTED %TODO ADJUST}	
+\item{\textbf{Number of boxes} ALRIGHT THIS NEEDS TO BE ADJUSTED} %TODO ADJUST	
 \item{The \textbf{mass of a box} is central to the performance of the control algorithms as it changes the total mass of the drone when carried. To reduce the complexity of the simulation however, these have been assumed to be massless and will as such not affect the drones movement}	
-\item{\textbf{}}	
-\item{\textbf{}}	
-\item{\textbf{}}	
+\item{\textbf{Max. velocity} is a parameter that was decided upon after some trial and error with getting the physical objects in the simulation environment, to behave in a real-life manner}	
+\item{\textbf{Max. acceleration} was as with the limited velocity, inserted to force objects into behaving in a real life manner. This was needed as the Simulink PID component (see Section \ref{sec:sim_pid}) had a tendency to overcompensate when accelerating drones to a desired velocity}	
+\item{\textbf{Attach Threshold} is an interesting and quite important parameter. It builds on the assumption that an agent at any given velocity, can grab and carry a box as long as the grabbing action is performed when the distance between the agent and the box is smaller than or equal to this value}	
 \end{itemize}
 
-\section{Simulation vs. Animation}
-\label{sec:simulation_animation}
-
-%TODO mention importance of distribution
-
-\section{Reality Criteria}
-\label{sec:reality}
-
-\section{Control Problem}
-\label{sec:control_problem}
-The Control Problem of the simulation, will be a construction task. 
 
 \section{Implementation}
 \label{sec:construction}
