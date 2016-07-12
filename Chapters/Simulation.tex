@@ -73,10 +73,10 @@ The \textit{Agents} within the simulation refer to the drones. The word agent is
 \centering
 \begin{tabularx}{1\textwidth}{l@{ }Xr}
 \toprule
-\textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value} \\ \midrule
-Agent-type       	 & What type of agent to be simulated                                          & ${Quadcopter}$ \\
-Size       		 	 & The space occupied by an agent                                    		   & ${15x15x2cm}$ \\
-Local Control        & The low-level control system which balances and controls the agent position & ${Simulink PD}$\\
+\textbf{Parameter}   & \textbf{Description}                                                        & \textbf{Value}  \\ \midrule
+Agent-type       	 & What type of agent to be simulated                                          & ${Quadcopter}$  \\
+Size       		 	 & The space occupied by an agent                                    		   & ${15x15x2cm}$   \\
+Local Control        & The low-level control system which balances and controls the agent position & ${Simulink PD}$ \\
 Mass of agent     	 & The number of quadcopters acting to solve the control problem               & ${150g}$        \\
 \bottomrule
 \end{tabularx}
@@ -133,13 +133,13 @@ Attach threshold     & The maximum distance from an agent to a box, before the b
 \section{Implementation}
 \label{sec:construction}
 
-After assessing the needs of the simulation model, the actual construction in simulink is done by connecting different modules in a circuit like manner. Explanations of the simulation construction will be done with references to the finished model, which can be seen in Figure \ref{fig:model_overview}. The modules and submodules of the simulation model have been labeled with a title, describing their function. 
+After assessing the needs of the simulation model, the actual construction in simulink is done by connecting different modules in a circuit like manner. The model consist of a mixture of predefined Simulink blocks and custom Matlab script blocks, for more advanced functionality, such as the control algorithms. The finished model, which can be seen in Figure \ref{fig:model_overview}. The modules and submodules of the simulation model have been labeled with a title, describing their functionality.
 
 % FIGURE
 \begin{figure}[H]
-  \centering
-  \includegraphics[width=1\columnwidth]{figures/model_overview}
-  \caption{\label{fig:model_overview}Overview of finished model in Simulink}
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/model_overview}
+  	\caption{\label{fig:model_overview}Overview of finished model in Simulink}
 \end{figure}
 
 The following subsections will outline how the different model requirements outlined in Section \ref{sec:physics}, were achieved in a step wise manner.
