@@ -142,19 +142,44 @@ After assessing the needs of the simulation model, the actual construction in si
   	\caption{\label{fig:model_overview}Overview of finished model in Simulink}
 \end{figure}
 
-The following subsections will outline how the different model requirements outlined in Section \ref{sec:physics}, were achieved in a step wise manner.
+The following subsections will outline how the different model requirements from Section \ref{sec:design}, were implemented in a step wise manner.
 
-\subsection{Sources and Sinks}
-The simulation is carried out with a start and an endpoint 
+\subsection{VR3D, Sources and Sinks}
+% TODO: reference
+As shown in Figure \ref{fig:2d_overview}, the simulation environment has certain starting points for the boxes and agents, and a desired endpoint for the boxes. The 3D animation is created with the Simulink plugin VR3D [INSERT REFERENCE], which acts both as a source and a sink. The VR3D editor is used to map the starting points of the objects, as well as the shape, size and all other visual aspects of the 3D environment. The actual 3D visuals can be found in Figure \ref{fig:3d_overview} where the transparent boxes are not physical objects but simply show the desired structure of the grey boxes. The data from the 3D environment, is then sent as a signal to the simulink model and to the control algorithm, which alters the signal and sends it back into the VR3D block to create an animation. The subsystems of the model which hold the source and the sink can be seen in Figure \ref{fig:model_overview} whereas the contents of the sink, with the signal parsing, is shown in Figure \ref{fig:3d_sink}
+
+% 3D World
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/3d_platform}
+  	\caption{\label{fig:3d_overview}Screenshot from the VR3D environment used in the simulation}
+\end{figure}
+
+% 3D Sink
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/3d_sink}
+  	\caption{\label{fig:3d_sink}Signal from model being parsed to VR3D Sink}
+\end{figure}
+
+
 
 \subsection{PID Controller}
 \label{sec:sim_pid}
 
-As mentioned in Section \ref{sec:simulation_animation}, it is important the control systems cannot alter the position of the quadcopters directly, but instead gives instructions to the quadcopters to change their thrust etc. 
+As mentioned in Section \ref{sec:simulation_animation}, it is important the swarm control algorithm cannot alter the position of the agents directly, but instead give instructions to the quadcopters to change their thrust etc. Distribution of control is implemented by having two separate control systems as briefly mentioned in \ref{sec:agents}. The two systems are shown in Figure \ref{fig:3d_overview}, as blocks labeled \textbf{\texttt{Local Control}} and \textbf{\texttt{Global}}. 
 
-Force, the parameter that is adjusted to achieve a desired position
+The \textbf{\texttt{Global}} Control System, controls and navigates the agents using the desired swarm algorithm. This Control block os what is referenced to throughout this thesis, as the \textit{Control System}. 
 
-base on reference, that PID is used for balancing etc...
+%TODO: Reference
+The \textbf{\texttt{Local Control}} is a subsystem (collection of Simulink blocks) responsible for handling the physical mechanics of the individual objects within the simulation. It uses a Simulink PID plugin, to enable the quadcopters to balance and move around in a real life manner. In practice, the global control system maps the different agents' desired position at a given time, sends this as a signal to the local control system. The local control system then attempts to achieve the results within the physical boundaries of the simulation [INSERT REFERENCE]. Figure \ref{fig:local_control} shows the local control system receiving the current and desired locations from the global control system, and for making the appropriate alterations.
+
+% 3D Sink
+\begin{figure}
+	\centering
+	\includegraphics[width=.7\columnwidth]{figures/local_control}
+  	\caption{\label{fig:local_control}Local Control subsystem}
+\end{figure}
 
 \subsection{Gravity \& Mass}
 \label{sec:sim_gravity}
