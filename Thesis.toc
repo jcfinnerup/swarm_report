@@ -32,12 +32,14 @@
 \contentsline {subsection}{\numberline {3.4.4}Control Loop}{18}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Data Stores}{18}{subsection.3.4.5}
 \contentsline {subsection}{\numberline {3.4.6}Measurements}{18}{subsection.3.4.6}
-\contentsline {subsection}{\numberline {3.4.7}Completion Check}{18}{subsection.3.4.7}
-\contentsline {section}{\numberline {3.5}Validation}{18}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Adjusting for desired behavior}{19}{subsection.3.5.1}
-\contentsline {section}{\numberline {3.6}Test Metrics}{20}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{20}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{21}{chapter.4}
-\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{21}{section.4.1}
-\contentsline {chapter}{\numberline {5}Design}{23}{chapter.5}
-\contentsline {chapter}{Bibliography}{24}{chapter.5}
+\contentsline {subsection}{\numberline {3.4.7}Completion Check}{19}{subsection.3.4.7}
+\contentsline {section}{\numberline {3.5}Validation}{19}{section.3.5}
+\contentsline {subsection}{\numberline {3.5.1}Gravity}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Measurements}{20}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Adjusting for desired behavior}{20}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Test Metrics}{21}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{21}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{23}{chapter.4}
+\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{23}{section.4.1}
+\contentsline {chapter}{\numberline {5}Design}{25}{chapter.5}
+\contentsline {chapter}{Bibliography}{26}{chapter.5}

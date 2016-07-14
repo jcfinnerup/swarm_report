@@ -204,19 +204,24 @@ The Data Stores in Figure \ref{fig:model_overview} work in connection with the G
 The measurements blocks in simulation model, are connected to the Global Control Loop, and perform different calculations on the progress of the simulation. The measurements are outlined in Section \ref{sec:test_metrics}, and are exported to graphs such that different control algorithms can be compared. This is done with the Simulink Scope block. 
 
 \subsection{Completion Check}
-Figure \ref{fig:completion_check} shows the part of the simulation model which is responsible for stopping the simulation time when the control problem is solved completely or when the time limit of 500 seconds is reached. 
+Figure \ref{fig:completion_check} shows the part of the simulation model which is responsible for stopping the simulation time when the control problem is solved completely or when the time limit of 500 seconds is reached. The control problem is solved once the blocks left to be moved correctly are equal to zero. 
 
 % Completion check
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\columnwidth]{figures/completion_check}
+  \includegraphics[width=.6\columnwidth]{figures/completion_check}
   \caption{\label{fig:completion_check}Completion check of the model}
 \end{figure}
 
 \section{Validation}
 \label{sec:validation}
 
-Validation on single agent level
+The validation of the simulation is done to check the it can mimic desired real world behavior. For the purpose of this simulation, the desired behavior is outlined in the physical assumptions of Section \ref{sec:physics}. The simulation however cannot be run without a control algorithm to move the agents, and for the purpose of validation, I use a Shortest Path algorithm. This simply directs the agents to move in a straight line from the boxes to their desired location, until all boxes have been placed correctly. This can be predicted to cause collisions, as the straight lines will be closer to each other, than the agent's width. For validation purposes this is desired, as it will test the simulation's ability to detect collisions. 
+
+
+\subsection{Gravity}
+
+\subsection{Measurements}
 
 \subsection{Adjusting for desired behavior}
 \label{sec:tuning}
@@ -246,7 +251,7 @@ short but unstable
   \caption{\label{fig:post_limit}Agent acceleration with acceleration}
 \end{figure}
 
-Shorter and wider is stable
+Shorter and wider is stables
 
 \section{Test Metrics}
 \label{sec:test_metrics}
