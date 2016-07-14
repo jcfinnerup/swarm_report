@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  12 JUL 2016 11:34
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  12 JUL 2016 11:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -872,40 +872,53 @@ File: figures/local_control.png Graphic file (type png)
 Package pdftex.def Info: figures/local_control.png used on input line 180.
 (pdftex.def)             Requested size: 241.71078pt x 183.02823pt.
 
+<figures/simulink_gravity_y.png, id=400, 801.99625pt x 342.27875pt>
+File: figures/simulink_gravity_y.png Graphic file (type png)
+
+<use figures/simulink_gravity_y.png>
+Package pdftex.def Info: figures/simulink_gravity_y.png used on input line 193.
+
+(pdftex.def)             Requested size: 276.24316pt x 117.89827pt.
+
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./figures/local_control.png>]
-<figures/SA_accel_pre_adjustment.png, id=405, 1536.74126pt x 718.685pt>
+<figures/SA_accel_pre_adjustment.png, id=408, 1536.74126pt x 718.685pt>
 File: figures/SA_accel_pre_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_pre_adjustment.png used on input line
- 206.
+ 216.
 (pdftex.def)             Requested size: 345.30264pt x 161.48878pt.
 
-<figures/SA_accel_pre_post_p_adjustment.png, id=406, 1427.3325pt x 738.76pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [18 <./figures/simulink_gravity_y.png>]
+<figures/SA_accel_pre_post_p_adjustment.png, id=414, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_pre_post_p_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_post_p_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_pre_post_p_adjustment.png used on inp
-ut line 215.
+ut line 225.
 (pdftex.def)             Requested size: 345.30264pt x 178.71509pt.
- [18 <./figures/SA_accel_pre_adjustment.png>]
-<figures/SA_accel_post_final_adjustment.png, id=413, 1427.3325pt x 738.76pt>
+
+<figures/SA_accel_post_final_adjustment.png, id=415, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_post_final_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_post_final_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_post_final_adjustment.png used on inp
-ut line 224.
+ut line 234.
 (pdftex.def)             Requested size: 345.30264pt x 178.71509pt.
-)
-Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [19 <./figures/SA_accel_pre_post_p_adjustment.png (PNG copy)> <./figures/SA_ac
-cel_post_final_adjustment.png (PNG copy)>] [20]
+Underfull \vbox (badness 1275) has occurred while \output is active []
+
+ [19 <./figures/SA_accel_pre_adjustment.png> <./figures/SA_accel_pre_post_p_adj
+ustment.png (PNG copy)>]) [20 <./figures/SA_accel_post_final_adjustment.png (PN
+G copy)>]
 \openout2 = `Chapters/swarm_algorithms.aux'.
 
- (./Chapters/swarm_algorithms.tex
+
+(./Chapters/swarm_algorithms.tex
 Chapter 4.
 ) [21
 
@@ -946,10 +959,10 @@ LaTeX Warning: There were undefined references.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9297 strings out of 494501
- 135180 string characters out of 6167030
- 232839 words of memory out of 5000000
- 12236 multiletter control sequences out of 15000+600000
+ 9304 strings out of 494501
+ 135378 string characters out of 6167030
+ 232939 words of memory out of 5000000
+ 12241 multiletter control sequences out of 15000+600000
  26810 words of font info for 68 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  43i,12n,45p,1068b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -973,10 +986,10 @@ exmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basi
 c/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015b
 asic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/20
 15basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Thesis.pdf (38 pages, 967845 bytes).
+Output written on Thesis.pdf (38 pages, 1042121 bytes).
 PDF statistics:
- 543 PDF objects out of 1000 (max. 8388607)
- 464 compressed objects within 5 object streams
- 102 named destinations out of 1000 (max. 500000)
- 379 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 548 PDF objects out of 1000 (max. 8388607)
+ 467 compressed objects within 5 object streams
+ 103 named destinations out of 1000 (max. 500000)
+ 384 words of extra memory for PDF output out of 10000 (max. 10000000)
 
