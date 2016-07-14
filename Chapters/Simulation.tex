@@ -5,8 +5,7 @@
 As mentioned previously in this paper, there are many advantages to performing simulation vs. carryings 
 
 
-The simulation environment, hereafter referred to as simple \textit{the simulation}, will be the abstract platform on which the quadcopters and their control algorithm can be tested. 
-In this chapter i will outline the construction of the simulation platform, as well of the validation used to ensure that the simulation follows the required physical mechanics. 
+The simulation environment, hereafter referred to as simple \textit{the simulation}, will be the 3D platform on which the quadcopters and their control algorithm can be tested. The simulation is carried out in continues time, and in this chapter i will outline the design and implementation of the simulation platform. Furthermore also the validation step used to ensure that the simulation follows the required physical mechanics. 
 
 \section{Simulation vs. Animation}
 \label{sec:simulation_animation}
@@ -18,7 +17,7 @@ The software used in this paper to create the simulation platform is Matlab Vers
 
 \section{Design}
 \label{sec:design}
-This section will outline the specifications of the simulation platform, after which it is designed. Please note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are the result of an iterative design process and tuning the simulation. 
+This section will outline the specifications of the simulation platform, after which it is designed. Note that some specifications were not intended from the beginning, such as a limitation on global velocity, but are the result of an iterative design process and tuning the simulation. 
 
 \subsection{Control Problem}
 \label{sec:control_problem}
@@ -172,7 +171,7 @@ As mentioned in Section \ref{sec:simulation_animation}, it is important the swar
 The \textbf{\texttt{Global}} Control System, controls and navigates the agents using the desired swarm algorithm. This Control block os what is referenced to throughout this thesis, as the \textit{Control System}. 
 
 %TODO: Reference
-The \textbf{\texttt{Local Control}} is a subsystem (collection of Simulink blocks) responsible for handling the physical mechanics of the individual objects within the simulation. It uses a Simulink PID plugin, to enable the quadcopters to balance and move around in a real life manner. In practice, the global control system maps the different agents' desired position at a given time, sends this as a signal to the local control system. The local control system then attempts to achieve the results within the physical boundaries of the simulation [INSERT REFERENCE]. Figure \ref{fig:local_control} shows the local control system receiving the current and desired locations from the global control system, and for making the appropriate alterations.
+The \textbf{\texttt{Local Control}} is a subsystem (collection of Simulink blocks) responsible for handling the physical mechanics of the individual objects within the simulation. It uses a Simulink PID plugin, to enable the quadcopters to balance and move around in a real life manner. In practice, the global control system maps the different agents' desired position at a given time, sends this as a signal to the local control system. The local control system then attempts to achieve the results within the physical boundaries of the simulation [INSERT REFERENCE]. Figure \ref{fig:local_control} shows the local control system receiving the current and desired locations from the global control system, and for making the appropriate alterations. For the process of adjusting the PID to mimic real world mechanics, please see Section \ref{sec:validation}.
 
 % Local Control
 \begin{figure}
@@ -195,12 +194,24 @@ The impulse of moving objects and their mass affected by gravity, is implemented
 \end{figure}
 
 \subsection{Control Loop}
-
+\label{sim:sec:control_loop}
+The Control Loop is the part of the model labeled as \texttt{Global Control} in Figure \ref{fig:model_overview}. This Simulink block consists of a Matlab function and within this Matlab function, the control loop is implemented, giving actions to each agent based on their sensory inputs. This is where the swarm algorithms, to be outlined in Chapter \ref{chap:swarm}, are implemented based on the agent's sensory inputs. As mentioned in Section \ref{sec:sim_pid} this iteratively communicates with the Local Control block. This block also computes the remaining part of the Control Problem, and sends a signal to the model to perform a simulation stop when the control problem is completed. 
+ 
 \subsection{Data Stores}
+The Data Stores in Figure \ref{fig:model_overview} work in connection with the Global Control Loop of the model, to store the data in between the iterations of the control loop. This is used to save the agent's sensory inputs over time, as well as the positions and other simulation data if required. This is needed due to the fact that Simulink Matlab function blocks, overwrites local variables for each computation of the control loop. As such these data stores are a way to use global variables in simulink. 
 
 \subsection{Measurements}
+The measurements blocks in simulation model, are connected to the Global Control Loop, and perform different calculations on the progress of the simulation. The measurements are outlined in Section \ref{sec:test_metrics}, and are exported to graphs such that different control algorithms can be compared. This is done with the Simulink Scope block. 
 
 \subsection{Completion Check}
+Figure \ref{fig:completion_check} shows the part of the simulation model which is responsible for stopping the simulation time when the control problem is solved completely or when the time limit of 500 seconds is reached. 
+
+% Completion check
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/completion_check}
+  \caption{\label{fig:completion_check}Completion check of the model}
+\end{figure}
 
 \section{Validation}
 \label{sec:validation}
