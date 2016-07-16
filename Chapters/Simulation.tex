@@ -124,7 +124,7 @@ Attach threshold     & The maximum distance from an agent to a box, before the b
 \item{\textbf{Number of boxes} ALRIGHT THIS NEEDS TO BE ADJUSTED} %TODO ADJUST	
 \item{The \textbf{mass of a box} is central to the performance of the control algorithms as it changes the total mass of the drone when carried. To reduce the complexity of the simulation however, these have been assumed to be massless and will as such not affect the drones movement}	
 \item{\textbf{Max. velocity} is a parameter that was decided upon after some trial and error with getting the physical objects in the simulation environment, to behave in a real-life manner}	
-\item{\textbf{Max. acceleration} was as with the limited velocity, inserted to force objects into behaving in a real life manner. This was needed as the Simulink PID component (see Section \ref{sec:sim_pid}) had a tendency to overcompensate when accelerating drones to a desired velocity}	
+\item{\textbf{Max. acceleration} was as with the limited velocity, inserted to force objects into behaving in a real life manner. This was needed as the Simulink PD component (see Section \ref{sec:sim_pid}) had a tendency to overcompensate when accelerating drones to a desired velocity}	
 \item{\textbf{Attach Threshold} is an interesting and quite important parameter. It builds on the assumption that an agent at any given velocity, can grab and carry a box as long as the grabbing action is performed when the distance between the agent and the box is smaller than or equal to this value}	
 \end{itemize}
 
@@ -163,7 +163,7 @@ As shown in Figure \ref{fig:2d_overview}, the simulation environment has certain
 
 
 
-\subsection{PID Controller}
+\subsection{PD Controller}
 \label{sec:sim_pid}
 
 As mentioned in Section \ref{sec:simulation_animation}, it is important the swarm control algorithm cannot alter the position of the agents directly, but instead give instructions to the quadcopters to change their thrust etc. Distribution of control is implemented by having two separate control systems as briefly mentioned in \ref{sec:agents}. The two systems are shown in Figure \ref{fig:3d_overview}, as blocks labeled \textbf{\texttt{Local Control}} and \textbf{\texttt{Global}}. 
@@ -171,7 +171,7 @@ As mentioned in Section \ref{sec:simulation_animation}, it is important the swar
 The \textbf{\texttt{Global}} Control System, controls and navigates the agents using the desired swarm algorithm. This Control block os what is referenced to throughout this thesis, as the \textit{Control System}. 
 
 %TODO: Reference
-The \textbf{\texttt{Local Control}} is a subsystem (collection of Simulink blocks) responsible for handling the physical mechanics of the individual objects within the simulation. It uses a Simulink PID plugin, to enable the quadcopters to balance and move around in a real life manner. In practice, the global control system maps the different agents' desired position at a given time, sends this as a signal to the local control system. The local control system then attempts to achieve the results within the physical boundaries of the simulation [INSERT REFERENCE]. Figure \ref{fig:local_control} shows the local control system receiving the current and desired locations from the global control system, and for making the appropriate alterations. For the process of adjusting the PID to mimic real world mechanics, please see Section \ref{sec:validation}.
+The \textbf{\texttt{Local Control}} is a subsystem (collection of Simulink blocks) responsible for handling the physical mechanics of the individual objects within the simulation. It uses a Simulink PD plugin, to enable the quadcopters to balance and move around in a real life manner. In practice, the global control system maps the different agents' desired position at a given time, sends this as a signal to the local control system. The local control system then attempts to achieve the results within the physical boundaries of the simulation [INSERT REFERENCE]. Figure \ref{fig:local_control} shows the local control system receiving the current and desired locations from the global control system, and for making the appropriate alterations. For the process of adjusting the PD to mimic real world mechanics, please see Section \ref{sec:validation}.
 
 % Local Control
 \begin{figure}
@@ -221,7 +221,7 @@ The validation of the simulation is done to check the it can mimic desired real 
 
 \subsection{Adjusting for desired behavior}
 \label{sec:tuning}
-One of the most challenging aspects to adjust for real world like behavior, turnout out to be the Local Control system which handles the balancing of the agents and physics of the agents and boxes. In this subsection i will go through three iterations on the PID adjustments to make the quadcopters accelerate and brake in a realistic fashion. The word \textit{realistic} is used loosely, as it simply refers to a behavior where the quadcopters can neither accelerate or break too quickly, but still maintain control. As mentioned in Section \ref{sec:sim_pid}, this is how the effect of impulse in moving objects, is implemented. The figures of this subsection show a single agent's movement on the X-axis, as it solves the setup from Figure \ref{fig:3d_overview}, which requires a lot of movement back and forth with breaking and acceleration. 
+One of the most challenging aspects to adjust for real world like behavior, turnout out to be the Local Control system which handles the balancing of the agents and physics of the agents and boxes. In this subsection i will go through three iterations on the PD adjustments to make the quadcopters accelerate and brake in a realistic fashion. The word \textit{realistic} is used loosely, as it simply refers to a behavior where the quadcopters can neither accelerate or break too quickly, but still maintain control. As mentioned in Section \ref{sec:sim_pid}, this is how the effect of impulse in moving objects, is implemented. The figures of this subsection show a single agent's movement on the X-axis, as it solves the setup from Figure \ref{fig:3d_overview}, which requires a lot of movement back and forth with breaking and acceleration. 
 
 % Pre adjustment
 \begin{figure}[H]
@@ -230,7 +230,7 @@ One of the most challenging aspects to adjust for real world like behavior, turn
   \caption{\label{fig:pre_adjust}Agent acceleration before adjustment}
 \end{figure}
 
-Figure \ref{fig:pre_adjust} shows the initial (or unadjusted) PID provided by Simulink, where the agent 'jolts' to an acceleration of 50 and then almost immediately, going back to linear decrease in acceleration. The desired behavior here is the symmetry of the graph as the reverse happens when moving in the other direction. The undesired part, is the large peak (or jolt) which resulted in a unstable movement in the simulation environment. To counter act this, the gain values of the controller were adjusted.
+Figure \ref{fig:pre_adjust} shows the initial (or unadjusted) PD provided by Simulink, where the agent 'jolts' to an acceleration of 50 and then almost immediately, going back to linear decrease in acceleration. The desired behavior here is the symmetry of the graph as the reverse happens when moving in the other direction. The undesired part, is the large peak (or jolt) which resulted in a unstable movement in the simulation environment. To counter act this, the gain values of the controller were adjusted.
  
 
 % Post adjustment
@@ -252,27 +252,51 @@ After some adjustment, the acceleration on the X axis where as shown in Figure \
 
 To combat this, it was effective to decrease the reaction time of the controller. The peaks are still relatively steep, however due to the faster reaction time, a much wider more stable acceleration curve is achieved. With this setup the peaks represent the movement from picking up a box to the placement point, where the small correction peaks represent breaking to pick up or drop off a box.  
 
-The final adjustments to the Local Control system PID , are as shown in Table \ref{}.
+The final adjustments to the Local Control system PD, are as shown in Table \ref{tab:pd_settings}.
+
+\begin{table}[H]
+\centering
+\label{tab:pd_settings}
+\begin{tabular}{ll}
+\hline
+\textbf{Parameter} & \textbf{Value} \\ \hline
+P-Gain             & 1.6            \\
+D-Gain             & 1.8            \\
+Filter Coefficient & 100            \\
+Acceleration Limit & +-20           \\
+Velocity Limit     & 50             \\ \hline
+\end{tabular}
+\caption{Local Control PD Settings}
+\end{table}
 
 \subsection{Gravity}
 \label{sim:sec:gravity}
-To test the gravitational mechanics, a simulation is run with a single agent, moving 9 boxes to a desired location (identical box setup previously showed in Figure \ref{fig:3d_overview}, only with a single drone). What can be seen in Figure \ref{fig:vertical_SA}, is the vertical position of the agent (yellow line), first falling unaffected and then being corrected by its thrusters to match a desired altitude. The blue line is the vertical position of a box, starting at a height of 10 cm and then falling to the floor height of 0. The simulation is not run to completion but only for approximately 7 seconds to show the gravitational acceleration. From the figure a slightly curvy correction can also be observed until the agent reaches a height of around 5, which is the PID controller working to stabilize the agent by adding thrust.
+To test the gravitational mechanics, a simulation is run with a single agent, moving 9 boxes to a desired location (identical box setup previously showed in Figure \ref{fig:3d_overview}, only with a single drone). What can be seen in Figure \ref{fig:vertical_SA}, is the vertical position of the agent (yellow line), first falling unaffected and then being corrected by its thrusters to match a desired altitude. The blue line is the vertical position of a box, starting at a height of 10 cm and then falling to the floor height of 0. The simulation is not run to completion but only for approximately 7 seconds to show the gravitational acceleration. From the figure a slightly curvy correction can also be observed until the agent reaches a height of around 5, which is the PD controller working to stabilize the agent by adding thrust.
 
 %TODO: Gravity is stretched on the Y Axis because of the conversion from cm to m
 
 % Pre adjustment
 \begin{figure}[H]
   \centering
-  \includegraphics[width=1\columnwidth]{figures/SA_y_axis_objects}
+  \includegraphics[width=0.8\columnwidth]{figures/SA_y_axis_objects}
   \caption{\label{fig:vertical_SA}Box and agent movement on vertical axis over time}
 \end{figure}
 
-\subsection{Measurements}
+\subsection{Collision Detections}
+One of the measurements taken by the simulation model, is the distance from each agent to its closest neighboring agent, from midpoint to midpoint. The way that the model detects collisions is when this distance is lower than the diameter of a single agent. This is tested on a shortest path algorithm and the agent distances over time as the simulation is completed is shown in Figure \ref{fig:short_dist}. As figure shows, collisions are not being avoided as the shortest paths for one agent, is almost directly next to the shortest path for another. The dotted black line represents the minimum distance before a collision and not surprisingly the agents are in almost constant collisions. The agent represented by the green line has a closer starting point to pick up a box and due to this head start, has fewer collision points. The Shortest Path is as such not a desirably control algorithm, however works nicely as a proof of concept for the collision detection and other mechanics, as it is simple to implement. 
 
+% Pre adjustment
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=0.8\columnwidth]{figures/MA_agent_overlap}
+  \caption{\label{fig:short_dist}Control Algorithm: Shortest Path - Agent distances}
+\end{figure}
 
 \section{Test Metrics}
 \label{sec:test_metrics}
 
+
+Flying below can trigger a collision
 \subsection{Testing on shortest path}
 
 

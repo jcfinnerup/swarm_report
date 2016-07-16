@@ -27,7 +27,7 @@
 \contentsline {subsection}{\numberline {3.3.4}Simulation Environment}{13}{subsection.3.3.4}
 \contentsline {section}{\numberline {3.4}Implementation}{14}{section.3.4}
 \contentsline {subsection}{\numberline {3.4.1}VR3D, Sources and Sinks}{15}{subsection.3.4.1}
-\contentsline {subsection}{\numberline {3.4.2}PID Controller}{16}{subsection.3.4.2}
+\contentsline {subsection}{\numberline {3.4.2}PD Controller}{16}{subsection.3.4.2}
 \contentsline {subsection}{\numberline {3.4.3}Gravity \& Mass}{17}{subsection.3.4.3}
 \contentsline {subsection}{\numberline {3.4.4}Control Loop}{18}{subsection.3.4.4}
 \contentsline {subsection}{\numberline {3.4.5}Data Stores}{18}{subsection.3.4.5}
@@ -36,10 +36,10 @@
 \contentsline {section}{\numberline {3.5}Validation}{19}{section.3.5}
 \contentsline {subsection}{\numberline {3.5.1}Adjusting for desired behavior}{20}{subsection.3.5.1}
 \contentsline {subsection}{\numberline {3.5.2}Gravity}{22}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Measurements}{22}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Test Metrics}{22}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{22}{subsection.3.6.1}
-\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{23}{chapter.4}
-\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{23}{section.4.1}
-\contentsline {chapter}{\numberline {5}Design}{25}{chapter.5}
-\contentsline {chapter}{Bibliography}{26}{chapter.5}
+\contentsline {subsection}{\numberline {3.5.3}Collision Detections}{23}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Test Metrics}{24}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{24}{subsection.3.6.1}
+\contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{25}{chapter.4}
+\contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{25}{section.4.1}
+\contentsline {chapter}{\numberline {5}Design}{27}{chapter.5}
+\contentsline {chapter}{Bibliography}{28}{chapter.5}
