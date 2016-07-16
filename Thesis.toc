@@ -34,11 +34,11 @@
 \contentsline {subsection}{\numberline {3.4.6}Measurements}{18}{subsection.3.4.6}
 \contentsline {subsection}{\numberline {3.4.7}Completion Check}{19}{subsection.3.4.7}
 \contentsline {section}{\numberline {3.5}Validation}{19}{section.3.5}
-\contentsline {subsection}{\numberline {3.5.1}Gravity}{20}{subsection.3.5.1}
-\contentsline {subsection}{\numberline {3.5.2}Measurements}{20}{subsection.3.5.2}
-\contentsline {subsection}{\numberline {3.5.3}Adjusting for desired behavior}{20}{subsection.3.5.3}
-\contentsline {section}{\numberline {3.6}Test Metrics}{21}{section.3.6}
-\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{21}{subsection.3.6.1}
+\contentsline {subsection}{\numberline {3.5.1}Adjusting for desired behavior}{20}{subsection.3.5.1}
+\contentsline {subsection}{\numberline {3.5.2}Gravity}{22}{subsection.3.5.2}
+\contentsline {subsection}{\numberline {3.5.3}Measurements}{22}{subsection.3.5.3}
+\contentsline {section}{\numberline {3.6}Test Metrics}{22}{section.3.6}
+\contentsline {subsection}{\numberline {3.6.1}Testing on shortest path}{22}{subsection.3.6.1}
 \contentsline {chapter}{\numberline {4}Swarm Logic \& Swarm Algorithms}{23}{chapter.4}
 \contentsline {section}{\numberline {4.1}Multi-body vs. Multi-agent path planning}{23}{section.4.1}
 \contentsline {chapter}{\numberline {5}Design}{25}{chapter.5}

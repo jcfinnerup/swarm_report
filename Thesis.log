@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  14 JUL 2016 12:13
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  16 JUL 2016 11:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -729,7 +729,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 58.
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=167, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=175, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
@@ -764,7 +764,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]) (./Chapters/preface.tex [3] [4
 
 ]
-<figures/SignatureDummy.jpg, id=203, 257.46187pt x 103.13531pt>
+<figures/SignatureDummy.jpg, id=211, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -831,7 +831,7 @@ LaTeX Warning: Citation `_matlab_2016' on page 9 undefined on input line 16.
 
 
 
-] <figures/2d_overview.png, id=333, 895.345pt x 338.26375pt>
+] <figures/2d_overview.png, id=343, 895.345pt x 338.26375pt>
 File: figures/2d_overview.png Graphic file (type png)
 
 <use figures/2d_overview.png>
@@ -842,21 +842,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
 [11 <./figures/2d_overview.png>] [12] [13]
-<figures/model_overview.png, id=368, 1134.2375pt x 628.3475pt>
+<figures/model_overview.png, id=378, 1134.2375pt x 628.3475pt>
 File: figures/model_overview.png Graphic file (type png)
 
 <use figures/model_overview.png>
 Package pdftex.def Info: figures/model_overview.png used on input line 140.
 (pdftex.def)             Requested size: 345.30264pt x 191.28616pt.
  [14]
-<figures/3d_platform.png, id=378, 1368.11125pt x 659.46375pt>
+<figures/3d_platform.png, id=388, 1368.11125pt x 659.46375pt>
 File: figures/3d_platform.png Graphic file (type png)
 
 <use figures/3d_platform.png>
 Package pdftex.def Info: figures/3d_platform.png used on input line 153.
 (pdftex.def)             Requested size: 345.30264pt x 166.44536pt.
  [15 <./figures/model_overview.png>]
-<figures/3d_sink.png, id=387, 1087.06125pt x 300.12125pt>
+<figures/3d_sink.png, id=397, 1087.06125pt x 300.12125pt>
 File: figures/3d_sink.png Graphic file (type png)
 
 <use figures/3d_sink.png>
@@ -865,14 +865,14 @@ Package pdftex.def Info: figures/3d_sink.png used on input line 160.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 169.
  [16 <./figures/3d_platform.png> <./figures/3d_sink.png>] <figures/local_contro
-l.png, id=399, 417.56pt x 316.18124pt>
+l.png, id=409, 417.56pt x 316.18124pt>
 File: figures/local_control.png Graphic file (type png)
 
 <use figures/local_control.png>
 Package pdftex.def Info: figures/local_control.png used on input line 179.
 (pdftex.def)             Requested size: 241.71078pt x 183.02823pt.
 
-<figures/simulink_gravity_y.png, id=401, 801.99625pt x 342.27875pt>
+<figures/simulink_gravity_y.png, id=411, 801.99625pt x 342.27875pt>
 File: figures/simulink_gravity_y.png Graphic file (type png)
 
 <use figures/simulink_gravity_y.png>
@@ -883,52 +883,60 @@ Package pdftex.def Info: figures/simulink_gravity_y.png used on input line 192.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./figures/local_control.png>] [18 <./figures/simulink_gravity_y.png>]
-<figures/completion_check.png, id=420, 390.45876pt x 229.85875pt>
+<figures/completion_check.png, id=431, 390.45876pt x 229.85875pt>
 File: figures/completion_check.png Graphic file (type png)
 
 <use figures/completion_check.png>
 Package pdftex.def Info: figures/completion_check.png used on input line 212.
 (pdftex.def)             Requested size: 207.18369pt x 121.96483pt.
-
-<figures/SA_accel_pre_adjustment.png, id=422, 1536.74126pt x 718.685pt>
+ [19 <./figures/completion_check.png>]
+<figures/SA_accel_pre_adjustment.png, id=442, 1536.74126pt x 718.685pt>
 File: figures/SA_accel_pre_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_pre_adjustment.png used on input line
- 232.
+ 229.
 (pdftex.def)             Requested size: 345.30264pt x 161.48878pt.
 
-Underfull \vbox (badness 1472) has occurred while \output is active []
-
- [19 <./figures/completion_check.png>]
-<figures/SA_accel_pre_post_p_adjustment.png, id=431, 1427.3325pt x 738.76pt>
+<figures/SA_accel_pre_post_p_adjustment.png, id=444, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_pre_post_p_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_post_p_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_pre_post_p_adjustment.png used on inp
-ut line 241.
+ut line 239.
 (pdftex.def)             Requested size: 345.30264pt x 178.71509pt.
 
-<figures/SA_accel_post_final_adjustment.png, id=432, 1427.3325pt x 738.76pt>
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [20 <./figures/SA_accel_pre_adjustment.png>]
+<figures/SA_accel_post_final_adjustment.png, id=452, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_post_final_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_post_final_adjustment.png>
 Package pdftex.def Info: figures/SA_accel_post_final_adjustment.png used on inp
-ut line 250.
+ut line 248.
 (pdftex.def)             Requested size: 345.30264pt x 178.71509pt.
- [20 <./figures/SA_accel_pre_adjustment.png> <./figures/SA_accel_pre_post_p_adj
-ustment.png (PNG copy)>])
-[21 <./figures/SA_accel_post_final_adjustment.png (PNG copy)>]
+
+Underfull \vbox (badness 10000) has occurred while \output is active []
+
+ [21 <./figures/SA_accel_pre_post_p_adjustment.png (PNG copy)> <./figures/SA_ac
+cel_post_final_adjustment.png (PNG copy)>]
+<figures/SA_y_axis_objects.png, id=460, 2049.6575pt x 823.075pt>
+File: figures/SA_y_axis_objects.png Graphic file (type png)
+
+<use figures/SA_y_axis_objects.png>
+Package pdftex.def Info: figures/SA_y_axis_objects.png used on input line 263.
+(pdftex.def)             Requested size: 345.30264pt x 138.65242pt.
+) [22 <./figures/SA_y_axis_objects.png (PNG copy)>]
 \openout2 = `Chapters/swarm_algorithms.aux'.
 
-
-(./Chapters/swarm_algorithms.tex [22
+ (./Chapters/swarm_algorithms.tex
+Chapter 4.
+) [23
 
 
 
 ]
-Chapter 4.
-) [23]
 \openout2 = `Chapters/design.aux'.
 
  (./Chapters/design.tex [24
@@ -961,8 +969,8 @@ Package rerunfilecheck Warning: File `Thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: 9404A7121BE8D677911EC637D65D5096;2662
-(rerunfilecheck)             After:  80CA8CAE0A5D1A5A54323AE8D2C0AE9C;2799.
+(rerunfilecheck)             Before: 80CA8CAE0A5D1A5A54323AE8D2C0AE9C;2799
+(rerunfilecheck)             After:  2F18A3851CF274014939142A718576DB;2799.
 
 LaTeX Warning: There were undefined references.
 
@@ -972,10 +980,10 @@ LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 108.
  ) 
 Here is how much of TeX's memory you used:
- 9316 strings out of 494501
- 135636 string characters out of 6167030
- 233050 words of memory out of 5000000
- 12247 multiletter control sequences out of 15000+600000
+ 9326 strings out of 494501
+ 135879 string characters out of 6167030
+ 233169 words of memory out of 5000000
+ 12255 multiletter control sequences out of 15000+600000
  26810 words of font info for 68 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  43i,12n,45p,1068b,504s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -999,10 +1007,10 @@ exmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2015basi
 c/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texlive/2015b
 asic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/texlive/20
 15basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Thesis.pdf (40 pages, 1078374 bytes).
+Output written on Thesis.pdf (40 pages, 1116978 bytes).
 PDF statistics:
- 569 PDF objects out of 1000 (max. 8388607)
- 484 compressed objects within 5 object streams
- 108 named destinations out of 1000 (max. 500000)
- 389 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 586 PDF objects out of 1000 (max. 8388607)
+ 500 compressed objects within 5 object streams
+ 109 named destinations out of 1000 (max. 500000)
+ 410 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -216,17 +216,12 @@ Figure \ref{fig:completion_check} shows the part of the simulation model which i
 \section{Validation}
 \label{sec:validation}
 
-The validation of the simulation is done to check the it can mimic desired real world behavior. For the purpose of this simulation, the desired behavior is outlined in the physical assumptions of Section \ref{sec:physics}. The simulation however cannot be run without a control algorithm to move the agents, and for the purpose of validation, I use a Shortest Path algorithm. This simply directs the agents to move in a straight line from the boxes to their desired location, until all boxes have been placed correctly. This can be predicted to cause collisions, as the straight lines will be closer to each other, than the agent's width. For validation purposes this is desired, as it will test the simulation's ability to detect collisions. 
-
-
-\subsection{Gravity}
-\label{sim:sec:gravity}
-
-\subsection{Measurements}
+The validation of the simulation is done to check the it can mimic desired real world behavior. For the purpose of this simulation, the desired behavior is outlined in the physical assumptions of Section \ref{sec:physics}. The simulation however cannot be run without a control algorithm to move the agents, and for the purpose of validation, I use a \textbf{Shortest Path} algorithm. This simply directs the agents to move in a straight line from the boxes to their desired location, until all boxes have been placed correctly. This can be predicted to cause collisions, as the straight lines will be closer to each other, than the agent's width. For validation purposes this is desired, as it will test the simulation's ability to detect collisions. The collisions detection will be tested with 5 agents and 9 boxes to rearrange, whereas the behavior of the physical mechanics will be tested only on a single agent. This is done as the properties of one agent are similar to multiple.  
 
 
 \subsection{Adjusting for desired behavior}
 \label{sec:tuning}
+One of the most challenging aspects to adjust for real world like behavior, turnout out to be the Local Control system which handles the balancing of the agents and physics of the agents and boxes. In this subsection i will go through three iterations on the PID adjustments to make the quadcopters accelerate and brake in a realistic fashion. The word \textit{realistic} is used loosely, as it simply refers to a behavior where the quadcopters can neither accelerate or break too quickly, but still maintain control. As mentioned in Section \ref{sec:sim_pid}, this is how the effect of impulse in moving objects, is implemented. The figures of this subsection show a single agent's movement on the X-axis, as it solves the setup from Figure \ref{fig:3d_overview}, which requires a lot of movement back and forth with breaking and acceleration. 
 
 % Pre adjustment
 \begin{figure}[H]
@@ -235,7 +230,8 @@ The validation of the simulation is done to check the it can mimic desired real 
   \caption{\label{fig:pre_adjust}Agent acceleration before adjustment}
 \end{figure}
 
-Stable but too tall
+Figure \ref{fig:pre_adjust} shows the initial (or unadjusted) PID provided by Simulink, where the agent 'jolts' to an acceleration of 50 and then almost immediately, going back to linear decrease in acceleration. The desired behavior here is the symmetry of the graph as the reverse happens when moving in the other direction. The undesired part, is the large peak (or jolt) which resulted in a unstable movement in the simulation environment. To counter act this, the gain values of the controller were adjusted.
+ 
 
 % Post adjustment
 \begin{figure}[H]
@@ -244,16 +240,35 @@ Stable but too tall
   \caption{\label{fig:post_adjust}Agent acceleration after adjustment of PD gains}
 \end{figure}
 
-short but unstable
+After some adjustment, the acceleration on the X axis where as shown in Figure \ref{fig:post_adjust}. This can be seen to produce a peak acceleration of under half of the previous setting which resulted in a more stable movement. The curves show that the corrections where not instantaneous. The curves however grow in their peak values, which suggest that the controller is now too weak to remove energy from the system fast enough, and instead adds energy by over correcting. 
 
 % Post limitation
 \begin{figure}[H]
   \centering
   \includegraphics[width=1\columnwidth]{figures/SA_accel_post_final_adjustment}
-  \caption{\label{fig:post_limit}Agent acceleration with acceleration}
+  \caption{\label{fig:post_limit}Agent acceleration after final adjustments}
 \end{figure}
 
-Shorter and wider is stabless
+
+To combat this, it was effective to decrease the reaction time of the controller. The peaks are still relatively steep, however due to the faster reaction time, a much wider more stable acceleration curve is achieved. With this setup the peaks represent the movement from picking up a box to the placement point, where the small correction peaks represent breaking to pick up or drop off a box.  
+
+The final adjustments to the Local Control system PID , are as shown in Table \ref{}.
+
+\subsection{Gravity}
+\label{sim:sec:gravity}
+To test the gravitational mechanics, a simulation is run with a single agent, moving 9 boxes to a desired location (identical box setup previously showed in Figure \ref{fig:3d_overview}, only with a single drone). What can be seen in Figure \ref{fig:vertical_SA}, is the vertical position of the agent (yellow line), first falling unaffected and then being corrected by its thrusters to match a desired altitude. The blue line is the vertical position of a box, starting at a height of 10 cm and then falling to the floor height of 0. The simulation is not run to completion but only for approximately 7 seconds to show the gravitational acceleration. From the figure a slightly curvy correction can also be observed until the agent reaches a height of around 5, which is the PID controller working to stabilize the agent by adding thrust.
+
+%TODO: Gravity is stretched on the Y Axis because of the conversion from cm to m
+
+% Pre adjustment
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=1\columnwidth]{figures/SA_y_axis_objects}
+  \caption{\label{fig:vertical_SA}Box and agent movement on vertical axis over time}
+\end{figure}
+
+\subsection{Measurements}
+
 
 \section{Test Metrics}
 \label{sec:test_metrics}
