@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  1 AUG 2016 19:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.12.4)  1 AUG 2016 21:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -689,6 +689,10 @@ LaTeX Warning: Label `fig:3d_stig_solved' multiply defined.
 
 LaTeX Warning: Label `fig:3d_stig_approx' multiply defined.
 
+) (./Chapters/conclusion.aux
+
+LaTeX Warning: Label `chap:stigmergy' multiply defined.
+
 ) (./Chapters/appendix.aux) (./Chapters/appendixb.aux))
 \openout1 = `Thesis.aux'.
 
@@ -765,7 +769,7 @@ LaTeX Font Info:    Try loading font information for T1+cmss on input line 61.
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmss.fd
 File: t1cmss.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-<figures/DTU-logo.pdf, id=273, 38.98846pt x 56.87358pt>
+<figures/DTU-logo.pdf, id=297, 38.98846pt x 56.87358pt>
 File: figures/DTU-logo.pdf Graphic file (type pdf)
 
 <use figures/DTU-logo.pdf>
@@ -800,7 +804,7 @@ File: ulasy.fd 1998/08/17 v2.2e LaTeX symbol font definitions
 ]) (./Chapters/preface.tex [3] [4
 
 ]
-<figures/SignatureDummy.jpg, id=308, 257.46187pt x 103.13531pt>
+<figures/SignatureDummy.jpg, id=332, 257.46187pt x 103.13531pt>
 File: figures/SignatureDummy.jpg Graphic file (type jpg)
 
 <use figures/SignatureDummy.jpg>
@@ -835,17 +839,17 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 
 Underfull \vbox (badness 1817) has occurred while \output is active []
 
- [2])
-[3]
+ [2]
+[3]) [4]
 \openout2 = `Chapters/methodology.aux'.
 
- (./Chapters/methodology.tex [4
-
-
-
-]
+ (./Chapters/methodology.tex
 Chapter 2.
-[5] [6]
+[5
+
+
+
+] [6]
 LaTeX Font Info:    Try loading font information for T1+cmtt on input line 24.
  (/usr/local/texlive/2015basic/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2014/09/29 v2.5h Standard LaTeX font definitions
@@ -868,7 +872,7 @@ LaTeX Warning: Citation `_matlab_2016' on page 9 undefined on input line 16.
 
 
 
-] <figures/2d_overview.png, id=473, 895.345pt x 338.26375pt>
+] <figures/2d_overview.png, id=503, 895.345pt x 338.26375pt>
 File: figures/2d_overview.png Graphic file (type png)
 
 <use figures/2d_overview.png>
@@ -879,21 +883,21 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [10]
 [11 <./figures/2d_overview.png>] [12] [13]
-<figures/model_overview.png, id=508, 1134.2375pt x 628.3475pt>
+<figures/model_overview.png, id=538, 1134.2375pt x 628.3475pt>
 File: figures/model_overview.png Graphic file (type png)
 
 <use figures/model_overview.png>
 Package pdftex.def Info: figures/model_overview.png used on input line 140.
 (pdftex.def)             Requested size: 345.30264pt x 191.28616pt.
  [14]
-<figures/3d_platform.png, id=518, 1368.11125pt x 659.46375pt>
+<figures/3d_platform.png, id=548, 1368.11125pt x 659.46375pt>
 File: figures/3d_platform.png Graphic file (type png)
 
 <use figures/3d_platform.png>
 Package pdftex.def Info: figures/3d_platform.png used on input line 153.
 (pdftex.def)             Requested size: 345.30264pt x 166.44536pt.
  [15 <./figures/model_overview.png>]
-<figures/3d_sink.png, id=527, 1087.06125pt x 300.12125pt>
+<figures/3d_sink.png, id=557, 1087.06125pt x 300.12125pt>
 File: figures/3d_sink.png Graphic file (type png)
 
 <use figures/3d_sink.png>
@@ -902,14 +906,14 @@ Package pdftex.def Info: figures/3d_sink.png used on input line 160.
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <10> not available
 (Font)              Font shape `T1/cmtt/m/n' tried instead on input line 169.
  [16 <./figures/3d_platform.png> <./figures/3d_sink.png>] <figures/local_contro
-l.png, id=539, 417.56pt x 316.18124pt>
+l.png, id=569, 417.56pt x 316.18124pt>
 File: figures/local_control.png Graphic file (type png)
 
 <use figures/local_control.png>
 Package pdftex.def Info: figures/local_control.png used on input line 179.
 (pdftex.def)             Requested size: 241.71078pt x 183.02823pt.
 
-<figures/simulink_gravity_y.png, id=541, 801.99625pt x 342.27875pt>
+<figures/simulink_gravity_y.png, id=571, 801.99625pt x 342.27875pt>
 File: figures/simulink_gravity_y.png Graphic file (type png)
 
 <use figures/simulink_gravity_y.png>
@@ -920,14 +924,14 @@ Package pdftex.def Info: figures/simulink_gravity_y.png used on input line 192.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [17 <./figures/local_control.png>] [18 <./figures/simulink_gravity_y.png>]
-<figures/completion_check.png, id=561, 390.45876pt x 229.85875pt>
+<figures/completion_check.png, id=591, 390.45876pt x 229.85875pt>
 File: figures/completion_check.png Graphic file (type png)
 
 <use figures/completion_check.png>
 Package pdftex.def Info: figures/completion_check.png used on input line 212.
 (pdftex.def)             Requested size: 207.18369pt x 121.96483pt.
  [19 <./figures/completion_check.png>]
-<figures/SA_accel_pre_adjustment.png, id=571, 1536.74126pt x 718.685pt>
+<figures/SA_accel_pre_adjustment.png, id=602, 1536.74126pt x 718.685pt>
 File: figures/SA_accel_pre_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_adjustment.png>
@@ -935,7 +939,7 @@ Package pdftex.def Info: figures/SA_accel_pre_adjustment.png used on input line
  229.
 (pdftex.def)             Requested size: 345.30264pt x 161.48878pt.
 
-<figures/SA_accel_pre_post_p_adjustment.png, id=573, 1427.3325pt x 738.76pt>
+<figures/SA_accel_pre_post_p_adjustment.png, id=604, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_pre_post_p_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_pre_post_p_adjustment.png>
@@ -946,7 +950,7 @@ ut line 239.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [20 <./figures/SA_accel_pre_adjustment.png>]
-<figures/SA_accel_post_final_adjustment.png, id=581, 1427.3325pt x 738.76pt>
+<figures/SA_accel_post_final_adjustment.png, id=612, 1427.3325pt x 738.76pt>
 File: figures/SA_accel_post_final_adjustment.png Graphic file (type png)
 
 <use figures/SA_accel_post_final_adjustment.png>
@@ -966,7 +970,7 @@ See the caption package documentation for explanation.
 LaTeX Warning: Reference `tab:pd_settings' on page 22 undefined on input line 2
 55.
 
-<figures/SA_y_axis_objects.png, id=592, 2049.6575pt x 823.075pt>
+<figures/SA_y_axis_objects.png, id=622, 2049.6575pt x 823.075pt>
 File: figures/SA_y_axis_objects.png Graphic file (type png)
 
 <use figures/SA_y_axis_objects.png>
@@ -976,7 +980,7 @@ Package pdftex.def Info: figures/SA_y_axis_objects.png used on input line 281.
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [22]
-<figures/MA_agent_overlap.png, id=600, 1224.575pt x 754.82pt>
+<figures/MA_agent_overlap.png, id=630, 1224.575pt x 754.82pt>
 File: figures/MA_agent_overlap.png Graphic file (type png)
 
 <use figures/MA_agent_overlap.png>
@@ -1020,7 +1024,7 @@ Overfull \hbox (22.41328pt too wide) in alignment at lines 37--37
 [][] 
  []
 
-[32] <figures/state_machine.png, id=659, 885.3075pt x 553.06625pt>
+[32] <figures/state_machine.png, id=689, 885.3075pt x 553.06625pt>
 File: figures/state_machine.png Graphic file (type png)
 
 <use figures/state_machine.png>
@@ -1047,21 +1051,21 @@ Underfull \hbox (badness 10000) in alignment at lines 73--73
  []
 
 [34 <./figures/state_machine.png>] [35]
-<figures/STIG_pheromones.png, id=680, 1911.14pt x 1106.1325pt>
+<figures/STIG_pheromones.png, id=711, 1911.14pt x 1106.1325pt>
 File: figures/STIG_pheromones.png Graphic file (type png)
 
 <use figures/STIG_pheromones.png>
 Package pdftex.def Info: figures/STIG_pheromones.png used on input line 106.
 (pdftex.def)             Requested size: 345.30264pt x 199.85478pt.
  [36 <./figures/STIG_pheromones.png (PNG copy)>] <figures/STIG_overlap.png, id=
-691, 1618.045pt x 800.9925pt>
+722, 1618.045pt x 800.9925pt>
 File: figures/STIG_overlap.png Graphic file (type png)
 
 <use figures/STIG_overlap.png>
 Package pdftex.def Info: figures/STIG_overlap.png used on input line 139.
 (pdftex.def)             Requested size: 345.30264pt x 170.9267pt.
 
-<figures/STIG_approx.png, id=692, 1993.4475pt x 951.555pt>
+<figures/STIG_approx.png, id=723, 1993.4475pt x 951.555pt>
 File: figures/STIG_approx.png Graphic file (type png)
 
 <use figures/STIG_approx.png>
@@ -1104,7 +1108,7 @@ Overfull \hbox (1.3627pt too wide) in paragraph at lines 50--51
 are up-dated through-
  []
 
-<figures/STIG_source_pheromones.png, id=719, 1692.3225pt x 931.48pt>
+<figures/STIG_source_pheromones.png, id=749, 1692.3225pt x 931.48pt>
 File: figures/STIG_source_pheromones.png Graphic file (type png)
 
 <use figures/STIG_source_pheromones.png>
@@ -1116,7 +1120,7 @@ Package pdftex.def Info: figures/STIG_source_pheromones.png used on input line
 LaTeX Warning: Reference `fig:phero_post1' on page 41 undefined on input line 5
 9.
 
-<figures/STIG_lay_grid1.png, id=720, 1848.9075pt x 843.15pt>
+<figures/STIG_lay_grid1.png, id=750, 1848.9075pt x 843.15pt>
 File: figures/STIG_lay_grid1.png Graphic file (type png)
 
 <use figures/STIG_lay_grid1.png>
@@ -1124,7 +1128,7 @@ Package pdftex.def Info: figures/STIG_lay_grid1.png used on input line 64.
 (pdftex.def)             Requested size: 345.30264pt x 157.45982pt.
  [41 <./figures/STIG_source_pheromones.png (PNG copy)>] [42 <./figures/STIG_lay
 _grid1.png (PNG copy)>]
-<figures/STIG_random_agent_overlap_lay.png, id=734, 1559.8275pt x 738.76pt>
+<figures/STIG_random_agent_overlap_lay.png, id=764, 1559.8275pt x 738.76pt>
 File: figures/STIG_random_agent_overlap_lay.png Graphic file (type png)
 
 <use figures/STIG_random_agent_overlap_lay.png>
@@ -1132,7 +1136,7 @@ Package pdftex.def Info: figures/STIG_random_agent_overlap_lay.png used on inpu
 t line 98.
 (pdftex.def)             Requested size: 345.30264pt x 163.53094pt.
 
-<figures/STIG_random_lay.png, id=735, 1559.8275pt x 738.76pt>
+<figures/STIG_random_lay.png, id=765, 1559.8275pt x 738.76pt>
 File: figures/STIG_random_lay.png Graphic file (type png)
 
 <use figures/STIG_random_lay.png>
@@ -1143,10 +1147,27 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
  [43 <./figures/STIG_random_agent_overlap_lay.png (PNG copy)>]) [44 <./figures/
 STIG_random_lay.png (PNG copy)>]
+\openout2 = `Chapters/conclusion.aux'.
+
+ (./Chapters/conclusion.tex
+Chapter 7.
+
+Package hyperref Warning: Difference (2) between bookmark levels is greater 
+(hyperref)                than one, level fixed on input line 7.
+
+
+Underfull \vbox (badness 5245) has occurred while \output is active []
+
+ [45
+
+
+
+])
+[46]
 \openout2 = `Chapters/appendix.aux'.
 
  (./Chapters/appendix.tex
-Chapter 7.
+Chapter 8.
 
 Overfull \hbox (9.94394pt too wide) in paragraph at lines 4--5
 \T1/cmr/m/n/10 The fol-low-ing ap-pendix con-tains the con-trol loop for the no
@@ -1161,7 +1182,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 4--5
 (/usr/local/texlive/2015basic/texmf-dist/tex/latex/listings/lstlang1.sty
 File: lstlang1.sty 2014/09/06 1.5e listings language file
 )
-[45
+[47
 
 
 
@@ -1178,7 +1199,7 @@ Overfull \hbox (37.1074pt too wide) in paragraph at lines 75--78
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [46]
+ [48]
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <8> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 93.
 
@@ -1214,7 +1235,7 @@ Overfull \hbox (37.1074pt too wide) in paragraph at lines 141--143
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [47]
+ [49]
 Overfull \hbox (21.811pt too wide) in paragraph at lines 149--150
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1252,7 +1273,7 @@ Overfull \hbox (11.6134pt too wide) in paragraph at lines 195--196
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [48]
+ [50]
 Overfull \hbox (1.4158pt too wide) in paragraph at lines 204--205
 [][][][][][][][][][][][][][][][][][][] 
  []
@@ -1282,21 +1303,21 @@ Overfull \hbox (16.7122pt too wide) in paragraph at lines 240--241
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-) [49]
+) [51]
 \openout2 = `Chapters/appendixb.aux'.
 
- (./Chapters/appendixb.tex [50
+ (./Chapters/appendixb.tex [52
 
 
 
 ]
-Chapter 8.
+Chapter 9.
 
 Underfull \hbox (badness 10000) in paragraph at lines 4--5
 
  []
 
-[51]
+[53]
 Overfull \hbox (11.6134pt too wide) in paragraph at lines 65--67
 [][][][][][][][][][][][][][][][][][] 
  []
@@ -1309,7 +1330,7 @@ Overfull \hbox (37.1074pt too wide) in paragraph at lines 77--80
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [52]
+ [54]
 Overfull \hbox (47.30501pt too wide) in paragraph at lines 101--102
 [][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1342,7 +1363,7 @@ Overfull \hbox (32.0086pt too wide) in paragraph at lines 144--145
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [53]
+ [55]
 Overfull \hbox (37.1074pt too wide) in paragraph at lines 148--150
 [][][][][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1400,7 +1421,7 @@ Overfull \hbox (37.1074pt too wide) in paragraph at lines 189--191
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [54]
+ [56]
 Overfull \hbox (47.30501pt too wide) in paragraph at lines 206--207
 [][][][][][][][][][][][][][][][][][][][] 
  []
@@ -1438,7 +1459,7 @@ Overfull \hbox (37.1074pt too wide) in paragraph at lines 253--255
 
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
- [55]
+ [57]
 Overfull \hbox (6.5146pt too wide) in paragraph at lines 261--262
 [][][][][][][][][][][][][][][][]
  []
@@ -1458,7 +1479,7 @@ Overfull \hbox (16.7122pt too wide) in paragraph at lines 275--277
 [][][][][][][][][][][][][][][][][][] 
  []
 
-) [56] (./Thesis.bbl [57
+) [58] (./Thesis.bbl [59
 
 
 ]
@@ -1467,15 +1488,16 @@ Underfull \hbox (badness 2591) in paragraph at lines 70--75
  []
 
 )
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 116.
- [58]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 116.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 117.
+ [60]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 117.
  (./Thesis.aux (./Chapters/introduction.aux) (./Chapters/methodology.aux) (./Ch
 apters/simulation.aux) (./Chapters/swarm_algorithms.aux)
 (./Chapters/stigmergy.aux) (./Chapters/layered_stigmergy.aux)
-(./Chapters/appendix.aux) (./Chapters/appendixb.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 116.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 116.
+(./Chapters/conclusion.aux) (./Chapters/appendix.aux) (./Chapters/appendixb.aux
+))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 117.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 117.
 
 
 Package rerunfilecheck Warning: File `Thesis.out' has changed.
@@ -1483,52 +1505,55 @@ Package rerunfilecheck Warning: File `Thesis.out' has changed.
 (rerunfilecheck)                or use package `bookmark'.
 
 Package rerunfilecheck Info: Checksums for `Thesis.out':
-(rerunfilecheck)             Before: D6BCFE4A66ED7582988B74CBB1415380;4527
-(rerunfilecheck)             After:  A1A5A5B93F46594E7BAF69552874C29D;4527.
+(rerunfilecheck)             Before: 4ED16261BD17A5B6143D0E2F44857C31;4963
+(rerunfilecheck)             After:  E8258B03379CAFC9184B267BC1E80B02;5185.
 
 LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 116.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 117.
  ) 
 Here is how much of TeX's memory you used:
- 12290 strings out of 494501
- 176187 string characters out of 6167030
- 311039 words of memory out of 5000000
- 14580 multiletter control sequences out of 15000+600000
+ 12317 strings out of 494501
+ 176648 string characters out of 6167030
+ 311532 words of memory out of 5000000
+ 14588 multiletter control sequences out of 15000+600000
  32348 words of font info for 85 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  43i,12n,45p,1081b,2370s stack positions out of 5000i,500n,10000p,200000b,80000s
-{/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1
-.enc}</usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-mi10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfont
-s/cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfo
-nts/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/a
-msfonts/cm/cmsy8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publi
-c/cm-super/sfbx0800.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/pu
-blic/cm-super/sfbx1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1
-/public/cm-super/sfbx1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/ty
-pe1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015basic/texmf-dist/fonts
-/type1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2015basic/texmf-dist/fo
-nts/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015basic/texmf-dist
-/fonts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015basic/texmf-d
-ist/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2015basic/texm
-f-dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2015basic/t
-exmf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015basi
-c/texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2015b
-asic/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/20
-15basic/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive
-/2015basic/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texl
-ive/2015basic/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/t
-exlive/2015basic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/loca
-l/texlive/2015basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
-Output written on Thesis.pdf (72 pages, 2147771 bytes).
+pdfTeX warning (dest): name{lstnumber.-2.267} has been referenced but does no
+t exist, replaced by a fixed one
+
+{/usr/local/texlive/2015basic/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.e
+nc}</usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
+10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/cm/
+cmr10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmr7.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmsy10.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy8.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/public/
+cm-super/sfbx0800.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/publ
+ic/cm-super/sfbx1000.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type1/p
+ublic/cm-super/sfbx1200.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/type
+1/public/cm-super/sfbx1440.pfb></usr/local/texlive/2015basic/texmf-dist/fonts/t
+ype1/public/cm-super/sfcc1200.pfb></usr/local/texlive/2015basic/texmf-dist/font
+s/type1/public/cm-super/sfrm0800.pfb></usr/local/texlive/2015basic/texmf-dist/f
+onts/type1/public/cm-super/sfrm1000.pfb></usr/local/texlive/2015basic/texmf-dis
+t/fonts/type1/public/cm-super/sfrm2488.pfb></usr/local/texlive/2015basic/texmf-
+dist/fonts/type1/public/cm-super/sfss0900.pfb></usr/local/texlive/2015basic/tex
+mf-dist/fonts/type1/public/cm-super/sfss1000.pfb></usr/local/texlive/2015basic/
+texmf-dist/fonts/type1/public/cm-super/sfss1728.pfb></usr/local/texlive/2015bas
+ic/texmf-dist/fonts/type1/public/cm-super/sfsx1000.pfb></usr/local/texlive/2015
+basic/texmf-dist/fonts/type1/public/cm-super/sfsx2074.pfb></usr/local/texlive/2
+015basic/texmf-dist/fonts/type1/public/cm-super/sfsx2488.pfb></usr/local/texliv
+e/2015basic/texmf-dist/fonts/type1/public/cm-super/sfti0800.pfb></usr/local/tex
+live/2015basic/texmf-dist/fonts/type1/public/cm-super/sfti1000.pfb></usr/local/
+texlive/2015basic/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb>
+Output written on Thesis.pdf (74 pages, 2154852 bytes).
 PDF statistics:
- 1546 PDF objects out of 1728 (max. 8388607)
- 1404 compressed objects within 15 object streams
- 691 named destinations out of 1000 (max. 500000)
- 647 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1591 PDF objects out of 1728 (max. 8388607)
+ 1447 compressed objects within 15 object streams
+ 703 named destinations out of 1000 (max. 500000)
+ 695 words of extra memory for PDF output out of 10000 (max. 10000000)
 

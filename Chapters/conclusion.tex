@@ -1,0 +1,39 @@
+
+\chapter{Conclusion}
+\label{chap:conclusion}
+
+The following chapter consists of the conclusion to the project, which is made up of an evaluation of how well the thesis adheres to its own subproblems and project plan. The project plan can be found in Section \ref{sec:projectplan}. 
+
+\subsection{Subproblem 1}
+\textit{Design and implement a simulation platform, based on a physical model, within which the algorithms can be used to control simulated agents}
+
+This was achieved successfully using Matlab and Simulink, and the result was a simulation model capable of modeling basic physical mechanics such as gravity and impulse. The model includes two control loops for decentralizing the movement of the drones, from the swarm control algorithm. This gave a clear method of controlling the drones within the simulation, as well as a blank canvas for implementing and experimenting with control algorithms. As such, subproblem 1 can be said to be achieved successfully.
+
+\subsection{Subproblem 2}
+\textit{Design a problem for the agents to collaborate on, as a standardized test for performance of the algorithms}
+
+The control problem for the swarm algorithms to work on, was successfully standardized, in the way that both the 3-stigmergic- and the layered stigmergy-algorithm uses the same control problem. However the control problem itself, suffers from an oversimplification. The number of blocks to be moved around to complete the control problem is fairly small, at 9 blocks. This affects the validity of the test metrics, as parameters such as 'time spent solving the control problem' doesn't have a large range, as most control algorithms solve the problem relatively fast. To my surprise however, a variation of this variable of more than 130\% was found between the shortest path- and the layered stigmergy-algorithm. Because of this, subproblem 2 can be said to be achieved but with room for improvement.
+
+\subsection{Subproblem 3}
+\textit{Determine the correct metrics for optimizing and comparing the swarm algorithms}
+The test metrics were used to compare the swarm algorithms both quantitatively and qualitatively. This was successfully carried out, but with only 4 test parameters this can be a source of error when comparing the algorithm. The qualitative metric of 'flight pattern' is another source of error when interpreting the test results, as it is a fairly subjective analysis of the flight paths of the drones, and required deep knowledge of the swarm algorithm to evaluate. Generic evaluation metrics for swarm algorithms were however not found in my literature discovery. Because of that, the subjectivity of one of the test metrics is deemed a natural consequence of inventing test metrics as an original contribution. Therefore subproblem 3 is arguably solved successfully. 
+
+
+\subsection{Subproblem 4}
+\textit{Implement swarm algorithms based on existing concepts, and test them using the metrics and the simulation platform}
+This was successfully done with both the 3-dimensional Stigmergy algorithm and the Layered Stigmergy algorithm, the latter being an original contribution. However, as mentioned in \ref{sec:projectplan}, the original plan included more complex algorithms to implement, with a wider range of techniques used to evaluate them. This subproblem is as such only solved to a smaller degree as i underestimated the complexity within even simpler swarm algorithms such pheromone based stigmergy. 
+
+\subsection{Subproblem 5}
+\textit{Optimize the control algorithms based on pre mentioned tests, and analyze potential areas of improvement}
+As with subproblem 4, the optimization aspect of the thesis suffered from an underestimation of the complexity and time required to implement and simulate swarm algorithms in general. As such, limited time was available for the optimization aspect. The only successfully implemented algorithm 3-dimensional stigmergy, was however attempted improved with another pheromone layer. This was tested and found only to be partly improving the original algorithm, as it improved the collision time, but worsened both the collision amount and overall time required to complete the control problem.
+
+
+\subsection{Sources of Error}
+A source of error when comparing the control algorithms, is as mentioned previously, the limited size of the control problem. The problem can be completed relatively fast and doesn't feature more complex block positions, such as rotating blocks on all axis. The small time-span control problem is also highlighted, as Matlab's random number generator will have a large effect on how long it takes to solve the problem. This is due to the fact that before the pheromones are activated, the agents are randomly searching for a place to start creating pheromones. This time span was found to vary between 6 seconds up to 31 seconds. As such this is a large source of error in a problem that otherwise takes between 60-240 seconds to solve. 
+
+
+\subsection{Further Research}
+
+
+
+
