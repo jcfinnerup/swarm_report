@@ -1,0 +1,55 @@
+
+\chapter{3-Dimensional Stigmergy}
+\label{chap:stigmergy}
+
+This chapter will outline the implementation attempt of the a stigmergy control algorithm, as well as some of the theory behind pheromone controlled agents. 
+ 
+\section{Digital Markers (Pheromones)}
+In the world of biology, stigmergy refers to using pheromones as a means of communication between agents. Originally described by (Grasse 1959)\cite{holland_stigmergy_1999}  as the way that termites or ant colonies maintain efficiency and overall planning when building hives. Pheromones are put in place by the agents as a marker to reinforce the behavior of other agent. Pheromones can be weakened over time or amplified by other agents passing over them, and as such the influence of the pheromones on the environment are increased.
+
+Several implementations of algorithms using stigmergy have been attempted in a 2-dimensional space, however my literature research found limited evidence of attempts of using stigmergy in 3 dimensions to control flying vehicles. 
+
+\section{Implementation}
+\label{stigmergy:impl}
+
+\subsection{Assumptions}
+\label
+The implementation of this stigmergy based algorithm, operates under the assumption that an agent can identify an object of interest when the object is within a certain distance from the agent. This is necessary for the stigmergy algorithm to work as a complete solution to navigating the agents, as the pheromones only serve to guide the agents in specific directions. As such, without the agents' ability to identify objects of interest, they would simply move in a more efficient manner, but without performing the desired actions when arriving at their desired location. As such, it is assumed that the agents know to pick up a block or put it down, when they find themselves at the location where this is supposed to happen. 
+
+This removes an element of complexity from the swarm algorithm, but is considered a fair assumption. It is therefore also assumed that this can be physically implemented with current sensor technology and object recognition, without negatively affecting the behavior of the stigmergy algorithm. 
+
+\subsection{Specifications}
+There are multiple variables to consider when implementing a pheromone based control algorithm. As the pheromones only represent a common set of information shared by all agents, in an otherwise decentralized environment, it is important to consider how this information is interpreted by the agents.  
+The first implementation attempt was done with the parameters identified in Table \ref{tab:vars1}
+
+\begin{table}[H]
+\centering
+\label{tab:vars1}
+\begin{tabularx}{0.6\textwidth}{ll}
+\toprule
+\textbf{Variables}     & \textbf{Value}  \\ \hline
+Pheromone grid size    & $30 \times 10 \times 10$               \\ \hline
+Pheromone fatigue      & $0/s$               \\
+Number of pheromone grids      & $0/s$               \\
+Constant pheromone  & $0.2$             \\
+Triggered pheromone & $1$               \\
+View radius of agent   & $2 \times agent-radius$ \\
+Agent states           & $4$               \\ \hline
+\end{tabularx}
+\caption{Specifications of fist attempt}
+\end{table}
+
+\begin{itemize}
+\item{The \textbf{Pheromone grid} is an empty $30x10x10$ matrix, containing only zeroes as the initial value. This is how the pheromones will be represented in 3 dimensions. The size and shape of this array is the same as the simulation environment, and when a pheromone is placed in space, the value of the pheromone will change from zero to the desired pheromone value}
+\item{\textbf{Pheromone fatigue} refers to the decrease in all pheromones over time. This is used to determine how long a pheromone can remain \textit{unused} before it fades and no longer has any effect on the behavior of the agents. The initial implementation was done with zero fatigue to observe the effect of having permanent pheromones}
+\item{\textbf{Constant pheromone} refers to the value that will be placed in the pheromone grid, just by an agent passing over it. \textbf{Triggered pheromone} will be the higher of a pheromone that the agent places in the grid, after having found an object of interest. Going back to the control problem, this can either be a block to be placed in the construction, or the area in which the block is supposed to be placed}
+\item{\textbf{View radius of agent} works on the assumptions , that any agent is able to identify an object of interest, as long as it is within a given radius}
+\item{\textbf{Agent states} is the number of states that an agent can be in, which in the case of the first implementation attempt is chosen to be four}
+\item{\textbf{Number of pheromone grids} translates into the number of different kinds of pheromones. This was chosen to be 1, you}
+\end{itemize}
+
+\subsection{Specifications}
+
+\section{Test}
+\label{chap:stigmergy_test}
+

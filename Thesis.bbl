@@ -16,6 +16,12 @@ J.~Alonso-Mora, S.~Baker, and D.~Rus.
   {Intelligent} {Robots} and {Systems} ({IROS})}, pages 4634--4641, September
   2015.
 
+\bibitem[BLK10]{bhattacharya_multi-agent_2010}
+Subhrajit Bhattacharya, Maxim Likhachev, and Vijay Kumar.
+\newblock Multi-agent path planning with multiple tasks and distance
+  constraints.
+\newblock In {\em {ICRA}}, pages 953--959, 2010.
+
 \bibitem[BRG{\etalchar{+}}11]{bhattacharjee_multi-robot_2011}
 Preetha Bhattacharjee, Pratyusha Rakshit, Indrani Goswami, Amit Konar, and
   Atulya~K. Nagar.
@@ -48,6 +54,12 @@ Pierre LATTEUR, Sébastien GOESSENS, Jean-Sébastien BRETON, Justin LEPLAT,
 \newblock Drone-{Based} {Additive} {Manufacturing} of {Architectural}
   {Structures}.
 \newblock 2016.
+
+\bibitem[Mas03]{mason_programming_2003}
+Zachary Mason.
+\newblock Programming with stigmergy: using swarms for construction.
+\newblock In {\em {ICAL} 2003: {Proceedings} of the eighth international
+  conference on {Artificial} life}, pages 371--374, 2003.
 
 \bibitem[mat16]{matlab_matlab_2016}
 matlab matlab.

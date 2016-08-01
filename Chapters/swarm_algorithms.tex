@@ -2,6 +2,32 @@
 \chapter{Swarm Logic \& Swarm Algorithms}
 \label{chap:swarm}
 
+This Chapter will briefly outline some of the concepts used in this thesis to differentiate different types of swarm algorithms. It will also introduce the algorithms implemented as part of this thesis as well as the reasoning behind. 
+
 \section{Multi-body vs. Multi-agent path planning}
 %master slave principle, single point of failure, etc.
 
+The distinction swarm and non-swarm intelligence in an algorithm is similar to the distinction multi-body and multi-agent planning \cite{bhattacharya_multi-agent_2010}. Multi-body planning refers to a centralized planning or control system in which the agents in the system are all controlled by a singular unit and as such all share the same information. Multi-agent planning however refers to a system in which the agents acting do not share the same information and acts as individuals, potentially with regards to the other agents. As such there is no master and no slaves and all agents are making decisions on their own. 
+
+Before a control algorithm can be categorized as a \textit{Swarm Algorithm} \cite{bhattacharya_multi-agent_2010}, it must function within a multi-agent environment and not a multi-body. The implementation of the control loop in the simulation used in this thesis, enables completely decentralized decision making by the agents, in order to house algorithms that fall into the swarm algorithm category.  
+
+\subsection{Simulated decentralization}
+The decentralization of the agents is implemented in the global control loop of the simulation model. It is achieved by not letting the agents act on information which is gathered by other agents, other than what a particular algorithm allows. The decentralized aspect of the agents can be said to be simulated, because the agents do have access to the information of other agents, but is simply \textit{told} not to use it, in order to simulate complete decentralization. 
+
+\section{3-Dimensional Stigmergy}
+\label{sec:3dimstig}
+The first algorithm that will be tested will be s pheromone based swarm algorithm. Pheromone based control of agents is known as \textit{Stigmergy} \cite{mason_programming_2003} and has in previous works [Mason, Zachar], been used for 2-dimensional construction using multi-agents. With inspiration from this work, i will attempt to map a pheromone based algorithm onto the 3-dimensional simulation environment. 
+
+In practice, pheromones represent a biological trace of scent left by an agent, which can be detected by other agents. In the simulated environment, the pheromones will be digitally represented and simply act as the only information which can be shared between agents. 
+
+The aim of implementing a 3-dimensional stigmergic algorithm as a control algorithm, is to have a swarm algorithm which functions in space, controlling an n-number of agents, while still keeping the algorithmic complexity lower, than i.e. a self improving algorithm. 
+ 
+\section{Layered Stigmergy}
+After implementing a 3-dimensional pheromone algorithm (See Chapter \ref{chap:stigmergy}), the second algorithm i planned to implement is a revised version of the 3 dimensional stigmergy control algorithm. This choice was made based on the tests of the 3-dimensional stigmergy algorithm (see Section \ref{chap:stigmergy_test}) and the potential areas of improvement identified. 
+
+The \textit{Layered} aspect, comes from the amount of pheromones
+
+
+
+%mason_programming_2003
+%holland_stigmergy_1999
