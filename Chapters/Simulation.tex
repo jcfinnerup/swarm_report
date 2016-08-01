@@ -304,7 +304,7 @@ Some of the test metrics used to evaluate the performance of the Control Algorit
 \textbf{Metric} &\textbf{Preference} & \textbf{Kind} \\ \midrule
 Number of collisions  & Lowest & ${Quantitative}$  \\
 Time spent completing control problem & Lowest & ${Quantitative}$  \\
-Utility of space & Highest & ${Quantitative}$  \\
+Utility of space & Lowest & ${Quantitative}$  \\
 Shape of flight pattern  & N/A & ${Qualitative}$  \\
 \bottomrule
 \end{tabularx}
@@ -315,7 +315,7 @@ Shape of flight pattern  & N/A & ${Qualitative}$  \\
 \begin{itemize}
 \item{\textbf{Number of collisions} will be the number of times an agent moves below the collision line, as showed in Figure \ref{fig:short_dist}}
 \item{\textbf{Time spend completing the control problem} refers to the time from the simulation starting, to the last block being placed in the control problem structure}
-\item{\textbf{Utility of space}, means how efficiently the agents move in proximity to each other. The highest utility of space, is a level in which the agents move as close to each other as possible without triggering a collision}
+\item{\textbf{Utility of space}, means how efficiently the agents move in proximity to each other. The lowest utility of space, is a level in which the agents move as close to each other as possible without triggering a collision}
 \item{\textbf{Shape of flight pattern} is a metric used to evaluate the performance in a qualitative way. Overviewing the flight pattern of the simulation on specific control algorithms, can sometimes give insight to issues, not easily visible on graphs or from measurements}
 \end{itemize}
 

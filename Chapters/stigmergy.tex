@@ -13,7 +13,6 @@ Several implementations of algorithms using stigmergy have been attempted in a 2
 \label{stigmergy:impl}
 
 \subsection{Assumptions}
-\label
 The implementation of this stigmergy based algorithm, operates under the assumption that an agent can identify an object of interest when the object is within a certain distance from the agent. This is necessary for the stigmergy algorithm to work as a complete solution to navigating the agents, as the pheromones only serve to guide the agents in specific directions. As such, without the agents' ability to identify objects of interest, they would simply move in a more efficient manner, but without performing the desired actions when arriving at their desired location. As such, it is assumed that the agents know to pick up a block or put it down, when they find themselves at the location where this is supposed to happen. 
 
 This removes an element of complexity from the swarm algorithm, but is considered a fair assumption. It is therefore also assumed that this can be physically implemented with current sensor technology and object recognition, without negatively affecting the behavior of the stigmergy algorithm. 
@@ -28,15 +27,15 @@ The first implementation attempt was done with the parameters identified in Tabl
 \begin{tabularx}{0.6\textwidth}{ll}
 \toprule
 \textbf{Variables}     & \textbf{Value}  \\ \hline
-Pheromone grid size    & $30 \times 10 \times 10$               \\ \hline
+Pheromone grid size    & $30 \times 10 \times 10$ \\ \hline
 Pheromone fatigue      & $0/s$               \\
-Number of pheromone grids      & $0/s$               \\
+Number of pheromone grids      & $1/s$               \\
 Constant pheromone  & $0.2$             \\
 Triggered pheromone & $1$               \\
 View radius of agent   & $2 \times agent-radius$ \\
 Agent states           & $4$               \\ \hline
 \end{tabularx}
-\caption{Specifications of fist attempt}
+\caption{Specifications of 3D Stigmergy implementation}
 \end{table}
 
 \begin{itemize}
@@ -45,11 +44,111 @@ Agent states           & $4$               \\ \hline
 \item{\textbf{Constant pheromone} refers to the value that will be placed in the pheromone grid, just by an agent passing over it. \textbf{Triggered pheromone} will be the higher of a pheromone that the agent places in the grid, after having found an object of interest. Going back to the control problem, this can either be a block to be placed in the construction, or the area in which the block is supposed to be placed}
 \item{\textbf{View radius of agent} works on the assumptions , that any agent is able to identify an object of interest, as long as it is within a given radius}
 \item{\textbf{Agent states} is the number of states that an agent can be in, which in the case of the first implementation attempt is chosen to be four}
-\item{\textbf{Number of pheromone grids} translates into the number of different kinds of pheromones. This was chosen to be 1, you}
+\item{\textbf{Number of pheromone grids} translates into the number of different kinds of pheromones }
 \end{itemize}
 
-\subsection{Specifications}
+\subsection{State machine diagram}
+Figure \ref{fig:state_machine} shows the state machine diagram of the agents as implemented in this stigmergy algorithm. The goal of the agent is (as described in the control problem section) to find and collect blocks, and place them in the desired (yet simple) construction. As the figure shows, the agent has 4 states, where the most important part of the figure, is the transition from the first to the second, and the third to the fourth state. In these transition the agent uses the pheromone grid to choose an area to search for either a block or a goal in. Goals refer to the desired position of a block.
 
-\section{Test}
+% Agent and simulation
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/state_machine}
+  	\caption{\label{fig:state_machine}State machine diagram for an agent (including simulation start/finish)}
+\end{figure}
+
+
+\subsection{Development of pheromones}
+The pheromones in the pheromone grid, are initially all given the value of zero. What this practically means is that there are not pheromones present in the simulation environment initially. In order for the pheromones to develop over time and affect the behavior of the agents, the agents themselves need to place them. This requires a set of general conditions under which the pheromones should be placed, which are outlined in Table \ref{tab:pheromones}.
+
+\begin{table}[H]
+\centering
+\label{tab:pheromones}
+\begin{tabularx}{1\textwidth}{llr}
+\toprule
+\textbf{Situation}     & \textbf{Action}   & \textbf{Condition}  \\ \hline
+Block found & place pheromone with value 1 & none \\
+Goal found & place pheromone with value -1 & none \\
+At any time & place pheromone with value 0.2 & pheromone < 0.2 \\ \hline
+\end{tabularx}
+\caption{Rules for pheromone placement}
+\end{table}
+
+The negative pheromone value of the goal, represents a practical way of distinguishing pheromones that lead to the goals, from the pheromones that lead to blocks. This builds on an assumption of 
+
+\subsection{Reacting to Pheromones}
+When the pheromones have started developing in the environment, the agents need to react to them for the pheromones to have any influence. As previously mentioned, this happens after state 1 and 3, which is shown in Figure \ref{fig:state_machine}. 
+
+The pheromones will influence the search of the agents and different strategies can be used to determine in what way. In the bullet points below i have listed some considerations that arose, from implementing effect of pheromones on the agents.
+
+\begin{itemize}
+\item{\textbf{Limit search space} - One way that the agents can react to pheromones, is to only move along paths that have already been marked with a pheromone value. This is essentially still a random search in space, but within a more limited scope, which suggests that it could be faster than without pheromones}
+\item{\textbf{Strongest pheromone} - Instead of performing a random search throughout the environment, another simply way to use pheromones as guides is to go for the strongest pheromone (highest or lowest value depending on state). If the strongest pheromones are placed at the blocks and the goals over time, then these would be efficient to find if the agents are looking for the strongest pheromone}
+\item{\textbf{Distance effects} - A slightly more complex way of using the pheromones to navigate, is to perform a distance calculation to the pheromones in the grid, and make the pheromones closest appear stronger than the ones further away}
+\end{itemize}
+
+Before any pheromone is placed in the grid, the search strategy for all agents is \textbf{random search} through out the level. The concrete implementation of the stigmergy algorithm, uses the a mix of all three strategies mentioned above, when a pheromone is present. 
+
+The actual Matlab code of the implementation can be found in Appendix A.
+
+
+\section{Testing}
 \label{chap:stigmergy_test}
+
+The following section includes the testing of the algorithm described above, and an evaluation of the test metrics outlined previously in Section \ref{sec:test_metrics}
+\subsection{Pheromone grid}
+
+After running the algorithm on the agents, the agents where able to complete the control problem successfully. The pheromone grid continuously evolved throughout the simulation, and after execution, the pheromone grid had the values which are shown in Figure \ref{fig:phero_post}.
+
+% Pheromones
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/STIG_pheromones}
+  	\caption{\label{fig:phero_post}Pheromone grid after simulation has finished (mapped onto the horizontal dimensions)}
+\end{figure}
+
+
+\subsection{Performance}
+
+% Environment Specifications
+\begin{table}[H]
+\centering
+\begin{tabularx}{1\textwidth}{l@{ }Xr}
+\toprule
+\textbf{Metric} &\textbf{Preference} & \textbf{Kind} \\ \midrule
+Number of collisions  & Lowest & $18$  \\
+Time spent completing control problem & Lowest & $120.1 seconds$  \\
+Utility of space & Lowest & $74\%$  \\
+Shape of flight pattern  & N/A & See comments below \\
+\bottomrule
+\end{tabularx}
+\caption{3D Stigmergy performance}
+\label{tab:stig_metrics}
+\end{table}
+
+\begin{itemize}
+\item{\textbf{Number of collisions} - The number of collisions of 18 is acceptable, for a solution spanning 120 seconds. However as Figure \ref{fig:3d_stig_solved} shows, the time spent in collisions is quite high  }
+\item{\textbf{Time spend completing the control problem} is twice as high as the shortest path algorithm tested in Section \ref{sec:test_metrics}, however with a lot less collisions.}
+\item{\textbf{Utility of space} - This number is ideally balanced with the number of collisions. The utility of space is desired low (which indicates that more agents can be added without causing issues in obstacle avoidance ), as long as it does not create collisions. As the collision number is already 18 over a long period of time, theres no desire to have a lower utility of space in this stigmergy algorithm}
+\item{\textbf{Shape of flight pattern} - For this 3D stigmergy algorithm, the flight pattern looks as expected. First the agents search in random locations, before quickly becoming more effective because of the pheromones. The randomness in the flight patterns can be seen in Figure \ref{fig:3d_stig_approx}, where the distances are not constantly minimized, but at multiple times seem to be increasing away from the goal. This happens when the agent does not have a strong enough pheromone follow, in the correct direction. This happens in the beginning, but as the pheromones are developed, the curve becomes steeper downwards, as desired}
+\end{itemize}
+
+% Pheromones
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/STIG_overlap}
+  	\caption{\label{fig:3d_stig_solved}Collisions of agents throughout simulation}
+\end{figure}
+
+% Pheromones
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=1\columnwidth]{figures/STIG_approx}
+  	\caption{\label{fig:3d_stig_approx}Total distances for blocks to goals over time}
+\end{figure}
+
+\subsection{Improvement}
+The digital pheromones show to be having the desired effects as the curve in Figure \ref{fig:3d_stig_approx}, starts out relatively flat, and then steepens. This shows that the agents are going from moving randomly, to moving according to the pheromones, solving the level faster. 
+
+An area of improvement however is the number of collisions. For this i attempted to implement a layered version of the Stigmergy algorithm of this chapter, which is covered in Chapter \ref{chap:lay_stig}.
 

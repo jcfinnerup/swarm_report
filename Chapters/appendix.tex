@@ -1,0 +1,255 @@
+
+\chapter{Appendix A}
+
+The following appendix contains the control loop for the non-layered 3-Dimensional Stigmergy implementation. \\
+
+\lstset { %
+    language=matlab,
+    backgroundcolor=\color{blue!5}, % set backgroundcolor
+    basicstyle=\footnotesize,% basic font setting
+}
+
+\begin{lstlisting}
+
+for i = 1:length(agents_at)
+        
+        % Decrease pheromones
+        
+        index_of_agent = agents_at(i);
+        
+        % Agent Positions
+        agent_x = CX(index_of_agent);
+        agent_y = CY(index_of_agent);
+        agent_z = CZ(index_of_agent);        
+        agent_pos = [agent_x agent_y agent_z];
+        
+        % Pheromone Index
+        p_index_x = floor((agent_x/10)+16);
+        p_index_y = floor((agent_y/10)+6);
+        p_index_z = floor((agent_z/10)+6);
+        
+        % Radius limiters when close to envirornment edge
+        z_neg = 1;
+        z_pos = 1;
+        x_neg = 1;
+        x_pos = 1;
+        
+        if p_index_z <= 1 
+            p_index_z = 1;
+            z_neg = 0;
+        elseif p_index_z >= 10 
+            p_index_z = 10 ;
+            z_pos = 0;
+        end
+        
+        if p_index_y <= 1 
+            p_index_y = 1;
+        elseif p_index_y >= 10 
+            p_index_y = 10 ;
+        end
+        
+        if p_index_x <= 1 
+            p_index_x = 1;
+            x_neg = 0;
+        elseif p_index_x >= 30 
+            p_index_x = 30;
+            x_pos = 0;
+        end
+        
+        curr_p_index = [p_index_x, p_index_y, p_index_z];
+        
+        % Value of current pheromone
+        % 0: Empty, 1: 
+        cur_p_value = pheromones(p_index_x, search_height, p_index_z);
+        
+       % pheromones(:) = 0;
+        % Setting current value to something
+        % pheromones(p_index_x, p_index_y, p_index_z) = 0;
+
+
+        % Assign movement towards box
+        if agents_moving_to(i,1) == 0
+
+            % Value, Index of highest element
+            [maxval, maxind] = max(pheromones(:));
+            [maxxidx, maxyidx, maxzidx] = ind2sub(size(pheromones),maxind);
+            
+            
+            % Agent data
+            % 1: State
+            % 2,3,4: Coordinates of desired movement
+            % 5: Box to carry
+            % 6: Pheromoned or random (0:random, 1:p, 2:new p)
+            
+            if maxval == 0 || agents_moving_to(i, 6) == 2
+                agents_moving_to(i, 2) = randi([-149 149],1,1);
+                agents_moving_to(i, 3) = search_height; 
+                agents_moving_to(i, 4) = randi([-49 49],1,1);
+                agents_moving_to(i, 6) = 0;
+                
+            elseif agents_moving_to(i, 6) == 0;
+                disp('Global Pheromone')
+                agents_moving_to(i, 6) = 1;
+                agents_moving_to(i, 2) = maxxidx*10-150;
+                agents_moving_to(i, 3) = search_height; 
+                agents_moving_to(i, 4) = maxzidx*10-50;
+            else 
+                 disp('Local random')
+                 agents_moving_to(i, 6) = 2;
+                 agents_moving_to(i, 2) = randi([agent_x-20 agent_x+20],1,1);
+                 agents_moving_to(i, 3) = search_height; 
+                 agents_moving_to(i, 4) = randi([agent_z-20 agent_z+20],1,1);
+            end
+            
+            agents_moving_to(i, 1) = 1;
+            
+            % Figure
+            Y=squeeze(pheromones(:,search_height,:));
+            
+            x_offset = Y;
+            x_offset2 = Y2;
+
+            figure(1), surf(x_offset);
+            xlabel('Z'), ylabel('X'), title('Pheromone distribution');
+            axis([0 10 0 30 -5 5]);
+
+        elseif agents_moving_to(i,1) == 1
+            
+            DX(index_of_agent) = agents_moving_to(i, 2);
+            DY(index_of_agent) = agents_moving_to(i, 3);
+            DZ(index_of_agent) = agents_moving_to(i, 4);
+            
+            C = [CX(index_of_agent) CY(index_of_agent) CZ(index_of_agent)];
+
+            % Boxes
+            box_dist = agent_view_radius;
+            closest_box_index = 0;
+            for b = 1:last_box_at 
+                dist = max(abs([CX(b) CY(b) CZ(b)] - C));
+                if blocks_moving_to(b) == 0 && dist <= box_dist
+                    box_dist = dist;
+                    closest_box_index = b;
+                end
+            end
+           
+            if closest_box_index > 0
+                DX(index_of_agent) = CX(closest_box_index);
+                DY(index_of_agent) = CY(closest_box_index) + block_height;
+                DZ(index_of_agent) = CZ(closest_box_index);
+            end
+                
+            D = [DX(index_of_agent) DY(index_of_agent) DZ(index_of_agent)];
+            
+            % Check if they are standing still, reset
+            if max(abs(C-D)) < stand_still_threshold
+                if closest_box_index > 0
+                    agents_moving_to(i, 1) = 2;
+                    blocks_moving_to(closest_box_index) = 1;
+                    agents_moving_to(i, 5) = closest_box_index;
+                    pheromones(p_index_x, search_height, p_index_z) = 1;  
+                elseif agents_moving_to(i, 6) == 0; % if not pheromoned
+                    agents_moving_to(i, 1) = 0;
+                    disp('Back to search 1');
+                else
+                    agents_moving_to(i, 1) = 0;
+                    disp('Back to search 0');
+                end
+            elseif cur_p_value == 0;
+                pheromones(p_index_x, search_height, p_index_z)  = 0.2; 
+            end
+            
+
+        % Assign movement towards goal
+        elseif agents_moving_to(i,1) == 2
+            
+            % Value, Index of highest element
+            [maxval, maxind] = min(pheromones(:));
+            [maxxidx, maxyidx, maxzidx] = ind2sub(size(pheromones),maxind);
+
+            if maxval == 0 || agents_moving_to(i, 6) == 2
+                agents_moving_to(i, 2) = randi([-149 149],1,1);
+                agents_moving_to(i, 3) = search_height; 
+                agents_moving_to(i, 4) = randi([-49 49],1,1);
+                agents_moving_to(i, 6) = 0;
+                
+            elseif agents_moving_to(i, 6) == 0;
+                disp('Global Pheromone')
+                agents_moving_to(i, 6) = 1;
+                agents_moving_to(i, 2) = maxxidx*10-150;
+                agents_moving_to(i, 3) = search_height; 
+                agents_moving_to(i, 4) = maxzidx*10-50;
+            else 
+                 disp('Local random')
+                 agents_moving_to(i, 6) = 2;
+                 agents_moving_to(i, 2) = randi([agent_x-20 agent_x+20],1,1);
+                 agents_moving_to(i, 3) = search_height; 
+                 agents_moving_to(i, 4) = randi([agent_z-20 agent_z+20],1,1);
+            end
+            
+            agents_moving_to(i, 1) = 3;
+            
+            % Figure
+            Y=squeeze(pheromones(:,search_height,:));
+            x_offset = Y;
+            figure(1), surf(x_offset);
+            xlabel('Z'), ylabel('X'), title('Pheromone distribution');
+            axis([0 10 0 30 -5 5])
+
+            
+        elseif agents_moving_to(i,1) == 3
+            
+            index_of_carried = agents_moving_to(i,5);
+            
+            CX(index_of_carried) = CX(agents_at(i));
+            CY(index_of_carried) = CY(agents_at(i))-block_height*.5;
+            CZ(index_of_carried) = CZ(agents_at(i));
+            
+            C = [CX(index_of_agent) CY(index_of_agent) CZ(index_of_agent)];
+            
+            % Goals
+            goal_dist = agent_view_radius;
+            closest_goal_index = 0;
+            for b = 1:last_box_at 
+                dist = max(abs([EX(b) EY(b) EZ(b)] - C));
+                if dist <= goal_dist
+                    goal_dist = dist;
+                    closest_goal_index = b;
+                end
+            end
+            
+            % Check if they are standing still, reset
+            if closest_goal_index > 0
+                DX(index_of_agent) = EX(closest_goal_index);
+                DY(index_of_agent) = EY(closest_goal_index)+block_height;
+                DZ(index_of_agent) = EZ(closest_goal_index);
+            else
+                DX(index_of_agent) = agents_moving_to(i, 2);
+                DY(index_of_agent) = agents_moving_to(i, 3);
+                DZ(index_of_agent) = agents_moving_to(i, 4);
+            end
+          
+            D = [DX(index_of_agent) DY(index_of_agent) DZ(index_of_agent)];
+            
+            % Check if they are standing still, reset
+            if max(abs(C-D)) < stand_still_threshold                
+                if closest_goal_index > 0
+                    agents_moving_to(i, 1) = 0;
+                    agents_moving_to(i, 5) = 0;
+                    blocks_moving_to(index_of_carried) = 2;
+                    pheromones(p_index_x, search_height, p_index_z)  = - 1;  
+                elseif agents_moving_to(i, 6) == 0; % if not pheromoned
+                    agents_moving_to(i, 1) = 2;
+                    disp('Back to search 3');
+                else
+                    agents_moving_to(i, 1) = 2;
+                    disp('Back to search 4');
+                end
+            end
+            
+  
+            
+        end
+    end
+
+
+\end{lstlisting}
