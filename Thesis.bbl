@@ -48,6 +48,10 @@ Owen Holland and Chris Melhuish.
 \newblock Stigmergy, self-organization, and sorting in collective robotics.
 \newblock {\em Artificial life}, 5(2):173--202, 1999.
 
+\bibitem[Kan12]{s_machine_2012}
+Burak Kanber.
+\newblock Machine {Learning}: {Introduction} to {Genetic} {Algorithms}, 2012.
+
 \bibitem[LGB{\etalchar{+}}16]{latteur_drone-based_2016}
 Pierre LATTEUR, Sébastien GOESSENS, Jean-Sébastien BRETON, Justin LEPLAT,
   Zhao MAb, and Caitlin MUELLER.

@@ -69,10 +69,9 @@
 \contentsline {subsection}{\numberline {7.0.2}Subproblem 2}{46}{subsection.7.0.2}
 \contentsline {subsection}{\numberline {7.0.3}Subproblem 3}{46}{subsection.7.0.3}
 \contentsline {subsection}{\numberline {7.0.4}Subproblem 4}{46}{subsection.7.0.4}
-\contentsline {subsection}{\numberline {7.0.5}Subproblem 5}{46}{subsection.7.0.5}
-\contentsline {subsection}{\numberline {7.0.6}Sources ofError}{46}{subsection.7.0.6}
-\contentsline {subsection}{\numberline {7.0.7}Overall Project}{46}{subsection.7.0.7}
-\contentsline {subsection}{\numberline {7.0.8}Further Research}{46}{subsection.7.0.8}
-\contentsline {chapter}{\numberline {8}Appendix A}{47}{chapter.8}
-\contentsline {chapter}{\numberline {9}Appendix B}{53}{chapter.9}
-\contentsline {chapter}{Bibliography}{59}{lstnumber.-2.267}
+\contentsline {subsection}{\numberline {7.0.5}Subproblem 5}{47}{subsection.7.0.5}
+\contentsline {subsection}{\numberline {7.0.6}Sources of Error}{47}{subsection.7.0.6}
+\contentsline {subsection}{\numberline {7.0.7}Further Research}{47}{subsection.7.0.7}
+\contentsline {chapter}{\numberline {8}Appendix A}{49}{chapter.8}
+\contentsline {chapter}{\numberline {9}Appendix B}{55}{chapter.9}
+\contentsline {chapter}{Bibliography}{61}{lstnumber.-2.267}
